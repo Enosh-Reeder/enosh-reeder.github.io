@@ -130,6 +130,23 @@
             border-radius: 4px;
             border-left: 3px solid var(--accent-color);
         }
+        /* --- About & Skills Section --- */
+        .about-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* This makes the image a circle */
+            object-fit: cover; /* Prevents the image from being stretched */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .about-text {
+            flex: 1; /* Allows the text to take up the remaining space */
+        }
         /* --- Projects & Experience Section --- */
         .project {
             margin-bottom: 2.5rem;
@@ -181,6 +198,11 @@
                 padding: 1.5rem;
                 margin: 1rem;
             }
+            .about-container { 
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+    }
         }
     </style>
 </head>
@@ -205,7 +227,52 @@
     </header>
 
     <div class="container">
-        <section id="about">
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-container">
+                    <img src="enosh-reeder-profile.jpg" alt="A professional headshot of Enosh Reeder" class="profile-picture">
+                    <div class="about-text">
+                        <p>
+                            Mechatronics and aerospace engineer with extensive experience in robotics, CAD, and prototyping.  Currently on the internal tools & test team at JUUL labs. Previously implemented inspection and metrology systems for solid-state lithium batteries. Also developed modular cargo robotics for autonomous last-mile delivery vehicles and a gigapixel-class aerial Wide Area Motion Imaging (WAMI) system. 
+                        </p>
+                    </div>
+                </div>
+                
+                <h2>Technical Skills</h2>
+                <div class="skill-matrix">
+                    <div class="skill-category">
+                        <h3>Design & Software</h3>
+                        <ul>
+                            <li>SolidWorks CAD/CAM/FEA/PDM </li>
+                            <li>Autodesk Fusion 360/Inventor </li>
+                            <li>Python | C++ | MATLAB | SQL </li>
+                            <li>LabView | Star-CCM+ CFD </li>
+                            <li>Arduino | G-Code | Linux </li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Fabrication & Machining</h3>
+                        <ul>
+                            <li>FFF/FDM/SLA 3D Printing </li>
+                            <li>Carbon Fiber & Fiberglass Composites </li>
+                            <li>Soldering | MIG/SMA Welding </li>
+                            <li>CNC Lathe / Mill / Router </li>
+                            <li>PCB & Cable Harnesses </li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>DFM/DFA & Prototyping</h3>
+                        <ul>
+                            <li>Plastic Injection Molding </li>
+                            <li>Aluminum Extrusions </li>
+                            <li>Sheet Metal | CNC | EDM </li>
+                            <li>GD&T (ASME Y14.5) </li>
+                            <li>FAA Remote Pilot (sUAS) </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+<!--        <section id="about">
             <h2>About Me</h2>
             <p>
                 Mechatronics and aerospace engineer with extensive experience in robotics, CAD, and prototyping.  Currently on the internal tools & test team at JUUL labs. Previously implemented inspection and metrology systems for solid-state lithium batteries. Also developed modular cargo robotics for autonomous last-mile delivery vehicles and a gigapixel-class aerial Wide Area Motion Imaging (WAMI) system. 
@@ -215,7 +282,7 @@
                     <h3>Design & Software</h3>
                     <ul>
                         <li>SolidWorks CAD/CAM/FEA/PDM </li>
-                        <li>Altium PCB design and layout </li>
+                        <li>Altium PCB Design and Layout </li>
                         <li>Autodesk Fusion 360/Inventor </li>
                         <li>Python | C++ | MATLAB | SQL </li>
                         <li>Arduino | G-Code | Linux </li>
@@ -242,8 +309,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
-
+        </section> -->
         <section id="projects">
             <h2>Featured Projects & Experience</h2>
 
