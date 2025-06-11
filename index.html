@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
     <style>
+        
         /* --- General Styles --- */
         :root {
             --dark-color: #222831;
@@ -46,6 +47,7 @@
         a:hover {
             text-decoration: underline;
         }
+
         /* --- Header & Hero Section --- */
         header.hero {
             background: var(--dark-color);
@@ -76,6 +78,33 @@
             background: #00c2cb;
             text-decoration: none;
         }
+
+        /* --- Top Contact Info Styles --- */
+        .top-contact-info {
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+            gap: 10px 15px; /* Adds space between items */
+        }
+        .top-contact-info a {
+            color: var(--light-color);
+            font-weight: bold;
+            font-size: 1rem;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.2s ease-in-out;
+        }
+        .top-contact-info a:hover {
+            border-bottom: 1px solid var(--accent-color);
+            text-decoration: none;
+        }
+        .top-contact-info span {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
         /* --- About & Skills Section --- */
         .skill-matrix {
             display: grid;
@@ -160,6 +189,15 @@
     <header class="hero">
         <h1>ENOSH REEDER</h1>
         <p class="subtitle">Mechatronics & Aerospace Engineer | Rapid Prototyping & Design</p>
+
+        <div class="top-contact-info">
+            <a href="mailto:enosh.reeder@gmail.com">enosh.reeder@gmail.com</a>
+            <span>&bull;</span>
+            <a href="tel:+18052347974">+1 (805) 234-7974</a>
+            <span>&bull;</span>
+            <a href="https://linkedin.com/in/enoshreedern" target="_blank">LinkedIn</a>
+        </div>
+
         <div class="hero-buttons">
             <a href="#projects" class="btn">View Projects</a>
             <a href="resume.pdf" class="btn" target="_blank">Download Résumé</a>
@@ -180,7 +218,6 @@
                         <li>Altium PCB design and layout </li>
                         <li>Autodesk Fusion 360/Inventor </li>
                         <li>Python | C++ | MATLAB | SQL </li>
-                        <li>LabView | Star-CCM+ CFD </li>
                         <li>Arduino | G-Code | Linux </li>
                     </ul>
                 </div>
