@@ -7,204 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-    <style>
-
-        /* --- General Styles --- */
-        :root {
-            --dark-color: #222831;
-            --medium-color: #393E46;
-            --accent-color: #00ADB5;
-            --light-color: #EEEEEE;
-        }
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 960px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        h1, h2, h3 {
-            font-family: 'Space Mono', monospace;
-            color: var(--dark-color);
-        }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-            margin-top: 2.5rem;
-        }
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Header & Hero Section --- */
-        header.hero {
-            background: var(--dark-color);
-            color: var(--light-color);
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            color: #fff;
-            margin: 0;
-        }
-        .hero .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            margin: 0.5rem 0 1.5rem 0;
-        }
-        .hero-buttons .btn {
-            background: var(--accent-color);
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 5px;
-            font-weight: bold;
-            margin: 0.5rem;
-            display: inline-block;
-        }
-        .hero-buttons .btn:hover {
-            background: #00c2cb;
-            text-decoration: none;
-        }
-
-        /* --- Top Contact Info Styles --- */
-        .top-contact-info {
-            margin: 1.5rem 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-            gap: 10px 15px; /* Adds space between items */
-        }
-        .top-contact-info a {
-            color: var(--light-color);
-            font-weight: bold;
-            font-size: 1rem;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-bottom 0.2s ease-in-out;
-        }
-        .top-contact-info a:hover {
-            border-bottom: 1px solid var(--accent-color);
-            text-decoration: none;
-        }
-        .top-contact-info span {
-            color: var(--accent-color);
-            font-size: 1.2rem;
-        }
-
-        /* --- About & Skills Section --- */
-        .skill-matrix {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .skill-category h3 {
-            margin-top: 0;
-            color: var(--accent-color);
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 8px;
-        }
-        .skill-category ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        .skill-category li {
-            background: #f9f9f9;
-            padding: 8px 12px;
-            margin-bottom: 6px;
-            border-radius: 4px;
-            border-left: 3px solid var(--accent-color);
-        }
-        /* --- About & Skills Section --- */
-        .about-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        .profile-picture {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%; /* This makes the image a circle */
-            object-fit: cover; /* Prevents the image from being stretched */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .about-text {
-            flex: 1; /* Allows the text to take up the remaining space */
-        }
-        /* --- Projects & Experience Section --- */
-        .project {
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #eee;
-        }
-        .project:last-child {
-            border-bottom: none;
-        }
-        .project-header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-        .project-header h3 {
-            margin: 0;
-        }
-        .project-header .company {
-            font-style: italic;
-            color: #555;
-        }
-        .project img {
-            width: 100%;
-            border-radius: 6px;
-            margin: 1rem 0;
-        }
-        .project ul {
-            padding-left: 20px;
-        }
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            background: var(--dark-color);
-            color: var(--light-color);
-        }
-        .footer-links a {
-            color: #fff;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        /* --- Responsive Adjustments --- */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .container {
-                padding: 1.5rem;
-                margin: 1rem;
-            }
-            .about-container { 
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-    }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -230,10 +33,14 @@
             <section id="about">
                 <h2>About Me</h2>
                 <div class="about-container">
-                    <img src="enosh-reeder-profile.jpg" alt="A professional headshot of Enosh Reeder" class="profile-picture">
+                    <img src="profile_pic.jpg" alt="A professional headshot of Enosh Reeder" class="profile-picture">
                     <div class="about-text">
                         <p>
-                            Mechatronics and aerospace engineer with extensive experience in robotics, CAD, and prototyping.  Currently on the internal tools & test team at JUUL labs. Previously implemented inspection and metrology systems for solid-state lithium batteries. Also developed modular cargo robotics for autonomous last-mile delivery vehicles and a gigapixel-class aerial Wide Area Motion Imaging (WAMI) system. 
+                            Mechatronics and aerospace engineer with extensive experience in robotics, CAD, and prototyping.  
+                            Currently on the internal tools & test team at JUUL labs. 
+                            Previously implemented inspection and metrology systems for solid-state lithium batteries. 
+                            Also developed modular cargo robotics for autonomous last-mile delivery vehicles 
+                            and a gigapixel-class aerial Wide Area Motion Imaging (WAMI) system. 
                         </p>
                     </div>
                 </div>
@@ -244,19 +51,19 @@
                         <h3>Design & Software</h3>
                         <ul>
                             <li>SolidWorks CAD/CAM/FEA/PDM </li>
+                            <li>Altium PCB Design and Layout </li>
                             <li>Autodesk Fusion 360/Inventor </li>
                             <li>Python | C++ | MATLAB | SQL </li>
-                            <li>LabView | Star-CCM+ CFD </li>
                             <li>Arduino | G-Code | Linux </li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>Fabrication & Machining</h3>
                         <ul>
-                            <li>FFF/FDM/SLA 3D Printing </li>
-                            <li>Carbon Fiber & Fiberglass Composites </li>
-                            <li>Soldering | MIG/SMA Welding </li>
-                            <li>CNC Lathe / Mill / Router </li>
+                            <li>3D Printing FFF/FDM/SLA </li>
+                            <li>Composite Manufacturing </li>
+                            <li>Laser Cutting & Engraving </li>
+                            <li>Manual & CNC Machining </li>
                             <li>PCB & Cable Harnesses </li>
                         </ul>
                     </div>
@@ -272,44 +79,7 @@
                     </div>
                 </div>
             </section>
-<!--        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Mechatronics and aerospace engineer with extensive experience in robotics, CAD, and prototyping.  Currently on the internal tools & test team at JUUL labs. Previously implemented inspection and metrology systems for solid-state lithium batteries. Also developed modular cargo robotics for autonomous last-mile delivery vehicles and a gigapixel-class aerial Wide Area Motion Imaging (WAMI) system. 
-            </p>
-            <div class="skill-matrix">
-                <div class="skill-category">
-                    <h3>Design & Software</h3>
-                    <ul>
-                        <li>SolidWorks CAD/CAM/FEA/PDM </li>
-                        <li>Altium PCB Design and Layout </li>
-                        <li>Autodesk Fusion 360/Inventor </li>
-                        <li>Python | C++ | MATLAB | SQL </li>
-                        <li>Arduino | G-Code | Linux </li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Fabrication & Machining</h3>
-                    <ul>
-                        <li>3D Printing FFF/FDM/SLA </li>
-                        <li>Composite Manufacturing </li>
-                        <li>Laser Cutting & Engraving </li>
-                        <li>Manual & CNC Machining </li>
-                        <li>PCB & Cable Harnesses </li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>DFM/DFA & Certifications</h3>
-                    <ul>
-                        <li>Plastic Injection Molding </li>
-                        <li>Aluminum Extrusions </li>
-                        <li>Sheet Metal | CNC | EDM </li>
-                        <li>GD&T (ASME Y14.5) </li>
-                        <li>FAA Remote Pilot (sUAS) </li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
+
         <section id="projects">
             <h2>Featured Projects & Experience</h2>
 
@@ -379,6 +149,7 @@
             </div>
         </div>
     </footer>
-
+    
+    <script src="script.js"></script>
 </body>
 </html>

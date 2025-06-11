@@ -1,153 +1,198 @@
-/* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* --- General Styles --- */
+:root {
+    --dark-color: #222831;
+    --medium-color: #393E46;
+    --accent-color: #00ADB5;
+    --light-color: #EEEEEE;
 }
-
-/* Body styling */
+html {
+    scroll-behavior: smooth;
+}
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f5f7fa;
-    color: #222;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #333;
     line-height: 1.6;
-    min-height: 100vh;
 }
-
-/* Header styling */
-header {
-    background: #222;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
-    color: #bbb;
-}
-
-/* Navigation */
-nav {
-    margin-top: 1rem;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-nav a:hover {
-    color: #4f8cff;
-}
-
-/* Main content */
-main {
-    max-width: 900px;
+.container {
+    max-width: 960px;
     margin: 2rem auto;
     padding: 2rem;
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-}
-
-/* Section headings */
-section h2 {
-    font-size: 2rem;
-    color: #4f8cff;
-    margin-bottom: 1rem;
-}
-
-/* Portfolio grid */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-}
-
-.project-card {
-    background: #f0f4fa;
     border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+h1, h2, h3 {
+    font-family: 'Space Mono', monospace;
+    color: var(--dark-color);
+}
+h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+}
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
 
-.project-card:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 4px 20px rgba(79,140,255,0.08);
+/* --- Header & Hero Section --- */
+header.hero {
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 4rem 1rem;
+    text-align: center;
 }
-
-.project-card h3 {
-    margin-bottom: 0.5rem;
-    color: #222;
-}
-
-.project-card p {
-    color: #555;
-    font-size: 1rem;
-}
-
-/* Contact form */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-input, textarea, button {
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-input, textarea {
-    padding: 0.75rem;
-    border: 1px solid #cfd8dc;
-    border-radius: 6px;
-    background: #f9fafb;
-    resize: vertical;
-}
-
-button {
-    background: #4f8cff;
+.hero h1 {
+    font-size: 2.5rem;
     color: #fff;
-    border: none;
-    padding: 0.75rem 2rem;
+    margin: 0;
+}
+.hero .subtitle {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin: 0.5rem 0 1.5rem 0;
+}
+.hero-buttons .btn {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0.5rem;
+    display: inline-block;
+}
+.hero-buttons .btn:hover {
+    background: #00c2cb;
+    text-decoration: none;
+}
+
+/* --- Top Contact Info Styles --- */
+.top-contact-info {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 10px 15px; /* Adds space between items */
+}
+.top-contact-info a {
+    color: var(--light-color);
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease-in-out;
+}
+.top-contact-info a:hover {
+    border-bottom: 1px solid var(--accent-color);
+    text-decoration: none;
+}
+.top-contact-info span {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+/* --- About & Skills Section --- */
+.skill-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.skill-category h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.skill-category li {
+    background: #f9f9f9;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    border-left: 3px solid var(--accent-color);
+}
+/* --- About & Skills Section --- */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* This makes the image a circle */
+    object-fit: cover; /* Prevents the image from being stretched */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.about-text {
+    flex: 1; /* Allows the text to take up the remaining space */
+}
+/* --- Projects & Experience Section --- */
+.project {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+.project:last-child {
+    border-bottom: none;
+}
+.project-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.project-header h3 {
+    margin: 0;
+}
+.project-header .company {
+    font-style: italic;
+    color: #555;
+}
+.project img {
+    width: 100%;
     border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.2s;
+    margin: 1rem 0;
 }
-
-button:hover {
-    background: #2563eb;
+.project ul {
+    padding-left: 20px;
 }
-
-/* Footer */
+/* --- Footer --- */
 footer {
     text-align: center;
-    padding: 1.5rem 0;
-    background: #222;
-    color: #bbb;
-    margin-top: 2rem;
-    font-size: 1rem;
+    padding: 2rem 1rem;
+    background: var(--dark-color);
+    color: var(--light-color);
 }
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    main {
-        padding: 1rem;
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    font-weight: bold;
+}
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
     }
-    .projects {
-        grid-template-columns: 1fr;
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    .about-container { 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
