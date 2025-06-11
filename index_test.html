@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enosh Reeder | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {                                                  /* Styles for the entire body of the page. */
+            font-family: 'Roboto', Arial, sans-serif;           /* Sets the default font to Roboto. If Roboto can't load, it tries Arial, then any available sans-serif font. */
+            margin: 0;                                          /* Removes the default spacing around the very edge of the page. */
+            background: #f4f4f4;                              /* Sets a light grey background color for the whole page. */
+            color: #222;                                      /* Sets the default text color to a dark grey. */
+        }
+        header {                                                /* Styles the header section at the top of the page. */ 
+            background: #222;                                 /* A dark grey background, creating a distinct top bar. */
+            color: #fff;                                      /* White text, so it's readable against the dark background. */
+            padding: 2rem 0;                                    /* Adds spacing inside the header: 2rem (32px) on top and bottom, 0 on left and right. */
+            text-align: center;                                 /* Centers all the text inside the header (your name, title, and nav links). */
+        }
+        nav {                                                   /* Styles the navigation links inside the header. */
+            margin-top: 1rem;                                   /* Adds a bit of space between the header text and the navigation links. */
+        }
+        nav a {                                                 /* Styles for each navigation link. */ 
+            color: #fff;                                      /* White text for the navigation links, so they stand out against the dark header. */   
+            margin: 0 1rem;                                     /* Adds horizontal spacing between the links: 1rem (16px) on left and right of each link. */   
+            text-decoration: none;                              /* Removes the default underline from links, making them look cleaner. */
+            font-weight: bold;                                  /* Makes the links bold for emphasis. */    
+        }
+        .container {                                            /* A container for the main content of the page. */                 
+            max-width: 900px;                                   /* Sets a maximum width for the main content area, so it doesn't stretch too wide on large screens. */
+            margin: 2rem auto;                                  /* Centers the container horizontally on the page. The top and bottom margins are 2rem (32px) to add space around it. */
+            padding: 2rem;                                      /* Adds padding inside the container for spacing around the content. */     
+            background: #fff;                                 /* A white background for the main content area, making it stand out against the light grey page background. */
+            padding: 2rem;                                      /* Adds padding inside the container for spacing around the content. */
+            border-radius: 8px;                                 /* Rounds the corners of the container for a softer look. */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);           /* Adds a subtle shadow around the container to give it depth and make it pop off the page. */
+        }
+        h2 {                                                    /* Styles for all level 2 headings (like "About Me", "Projects", etc.). */
+            color: #222;                                      /* Dark grey color for the headings, matching the body text color. */
+            border-bottom: 2px solid #eee;                    /* A light grey line under the headings to visually separate them from the content below. */
+            padding-bottom: 0.5rem;                             /* Adds some space below the heading text, so it doesn't touch the line. */
+        }
+        .projects {                                             /* Styles the section that contains your projects. */
+            display: grid;                                      /* Uses CSS Grid to layout the project items. */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Creates a responsive grid that automatically fits as many columns as possible, with each column being at least 250px wide and taking up equal space. */
+            gap: 1.5rem;                                        /* Adds space between the grid items (projects). */
+            margin-top: 1rem;                                   /* Adds space above the projects section, separating it from the previous section. */
+        }
+        .project {                                              /* Styles for each individual project item. */
+            background: #fafafa;                              /* A very light grey background for each project item, making it distinct from the white container background. */
+            border-radius: 6px;                                 /* Rounds the corners of each project item for a softer look. */
+            padding: 1rem;                                      /* Adds padding inside each project item for spacing around the content. */
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);           /* Adds a subtle shadow to each project item, giving it depth. */
+        }
+        .project h3 {                                           /* Styles for the project titles (level 3 headings). */
+            margin-top: 0;                                      /* Removes the default top margin, so the title is flush with the top of the project item. */
+        }
+        footer {
+            text-align: center;                                 /* Centers the footer text. */
+            padding: 1rem 0;                                    /* Adds vertical padding inside the footer for spacing. */
+            background: #222;                                 /* A dark grey background for the footer, matching the header. */
+            color: #fff;                                      /* White text in the footer for readability. */
+            margin-top: 2rem;                                   /* Adds space above the footer, separating it from the main content. */   
+        }
+        @media (max-width: 600px) {                             /* Media query for screens smaller than 600px (like mobile devices). */
+            .container {                                        /* Adjusts the container styles for smaller screens. */
+                padding: 1rem;                                  /* Reduces the padding inside the container to make better use of limited space. */
+            }
+        }
+    </style>                    
+</head>
+<body>
+    <header>        
+        <h1>Enosh Reeder</h1>                                           
+        <p>Mechatronics &amp; Aerospace Engineer</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hi! I'm Enosh Reeder, a passionate web developer specializing in building modern, responsive websites and applications. I enjoy turning ideas into reality using code and design.
+            </p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Project One</h3>
+                    <p>A brief description of your first project. Highlight the technologies used and your role.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Two</h3>
+                    <p>A brief description of your second project. Mention any challenges you overcame.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Three</h3>
+                    <p>A brief description of your third project. Showcase your skills and achievements.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Feel free to reach out via email: <a href="mailto:enosh.reeder@gmail.com">enosh.reeder@gmail.com</a>
+            </p>
+            <p>
+                Or connect on <a href="https://www.linkedin.com/in/enoshreeder" target="_blank">LinkedIn</a>
+            </p>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 Enosh Reeder. All rights reserved.
+    </footer>
+</body>
+</html>

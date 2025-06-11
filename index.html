@@ -1,120 +1,301 @@
+Of course. Based on your resume and the modern "Technical Case Study" layout we discussed, I have generated the necessary HTML and CSS for your portfolio website.
+
+I have structured the file as a single `index.html` with an internal stylesheet for simplicity. This makes it easy for you to manage, edit, and push to GitHub. I have taken the content directly from your resume and organized it into the appropriate sections.
+
+### Key Features of this Generated Website:
+
+* **Professional, Clean Design:** The layout is inspired by the "Technical Case Study" model we discussed, which is ideal for a mechatronics engineer.
+* [cite_start]**Resume-Driven Content:** All the text, skills, and project descriptions are taken directly from your provided resume. [cite: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+* [cite_start]**Organized Skill Matrix:** Your technical skills are categorized as we planned to showcase the breadth of your expertise. [cite: 3, 4, 5, 6, 7, 8, 9, 10]
+* **Detailed Project Sections:** The "Featured Projects" section is designed to be easily expanded into mini case studies. [cite_start]I've highlighted two major projects from your experience: the uPod from Udelv and the WAMI system from Transparent Sky. [cite: 12, 13]
+* **Responsive Design:** The CSS includes a responsive layout for the project grid and mobile-friendly adjustments.
+* **Placeholder Images:** As requested, I've inserted placeholder images from `https://placehold.co`. You can simply replace these URLs with your actual project photos.
+
+---
+
+### Your `index.html` File
+
+You can copy the code below, save it as `index.html`, and open it in your browser to see your new portfolio website.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Enosh Reeder | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enosh Reeder | Mechatronics & Aerospace Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
     <style>
+        /* --- General Styles --- */
+        :root {
+            --dark-color: #222831;
+            --medium-color: #393E46;
+            --accent-color: #00ADB5;
+            --light-color: #EEEEEE;
+        }
         body {
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             background: #f4f4f4;
-            color: #222;
-        }
-        header {
-            background: #222;
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        nav {
-            margin-top: 1rem;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
+            color: #333;
+            line-height: 1.6;
         }
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 2rem auto;
-            background: #fff;
             padding: 2rem;
+            background: #fff;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        h1, h2, h3 {
+            font-family: 'Space Mono', monospace;
+            color: var(--dark-color);
         }
         h2 {
-            color: #222;
             border-bottom: 2px solid #eee;
             padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
         }
-        .projects {
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* --- Header & Hero Section --- */
+        header.hero {
+            background: var(--dark-color);
+            color: var(--light-color);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin: 0;
+        }
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin: 0.5rem 0 1.5rem 0;
+        }
+        .hero-buttons .btn {
+            background: var(--accent-color);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0.5rem;
+            display: inline-block;
+        }
+        .hero-buttons .btn:hover {
+            background: #00c2cb;
+            text-decoration: none;
+        }
+        /* --- About & Skills Section --- */
+        .skill-matrix {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-        .project {
-            background: #fafafa;
-            border-radius: 6px;
-            padding: 1rem;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-        }
-        .project h3 {
-            margin-top: 0;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #222;
-            color: #fff;
+            gap: 2rem;
             margin-top: 2rem;
         }
-        @media (max-width: 600px) {
+        .skill-category h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+        .skill-category ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skill-category li {
+            background: #f9f9f9;
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 4px;
+            border-left: 3px solid var(--accent-color);
+        }
+        /* --- Projects & Experience Section --- */
+        .project {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .project:last-child {
+            border-bottom: none;
+        }
+        .project-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .project-header h3 {
+            margin: 0;
+        }
+        .project-header .company {
+            font-style: italic;
+            color: #555;
+        }
+        .project img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        .project ul {
+            padding-left: 20px;
+        }
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--dark-color);
+            color: var(--light-color);
+        }
+        .footer-links a {
+            color: #fff;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
             .container {
-                padding: 1rem;
+                padding: 1.5rem;
+                margin: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Enosh Reeder</h1>
-        <p>Web Developer &amp; Designer</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+
+    <header class="hero">
+        <h1>ENOSH REEDER</h1>
+        <p class="subtitle">Mechatronics & Aerospace Engineer | CAD, Prototyping, and Metrology</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="resume.pdf" class="btn" target="_blank">Download Résumé</a>
+        </div>
     </header>
+
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
             <p>
-                Hi! I'm Enosh Reeder, a passionate web developer specializing in building modern, responsive websites and applications. I enjoy turning ideas into reality using code and design.
+                [cite_start]A mechatronics and aerospace engineer with extensive experience in CAD, prototyping, and metrology. [cite: 1] [cite_start]Currently implementing inspection and metrology systems for solid-state lithium batteries. [cite: 1] [cite_start]Previously, I have developed modular cargo robotics for autonomous last-mile delivery vehicles [cite: 2] [cite_start]and built a gigapixel-class aerial Wide Area Motion Imaging (WAMI) system. [cite: 2]
             </p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3>Project One</h3>
-                    <p>A brief description of your first project. Highlight the technologies used and your role.</p>
+            <div class="skill-matrix">
+                <div class="skill-category">
+                    <h3>Design & Software</h3>
+                    <ul>
+                        [cite_start]<li>SolidWorks CAD/CAM/FEA/PDM [cite: 3]</li>
+                        [cite_start]<li>Autodesk Fusion 360/Inventor [cite: 4]</li>
+                        <li>Python | C++ | MATLAB | [cite_start]SQL [cite: 4]</li>
+                        <li>LabView | [cite_start]Star-CCM+ CFD [cite: 4]</li>
+                        <li>Arduino | G-Code | [cite_start]Linux [cite: 5]</li>
+                    </ul>
                 </div>
-                <div class="project">
-                    <h3>Project Two</h3>
-                    <p>A brief description of your second project. Mention any challenges you overcame.</p>
+                <div class="skill-category">
+                    <h3>Fabrication & Machining</h3>
+                    <ul>
+                        [cite_start]<li>FFF/FDM/SLA 3D Printing [cite: 8]</li>
+                        [cite_start]<li>Carbon Fiber & Fiberglass Composites [cite: 7]</li>
+                        <li>Soldering | [cite_start]MIG/SMA Welding [cite: 8]</li>
+                        [cite_start]<li>CNC Lathe / Mill / Router [cite: 6]</li>
+                        [cite_start]<li>PCB & Cable Harnesses [cite: 9]</li>
+                    </ul>
                 </div>
-                <div class="project">
-                    <h3>Project Three</h3>
-                    <p>A brief description of your third project. Showcase your skills and achievements.</p>
+                <div class="skill-category">
+                    <h3>DFM/DFA & Prototyping</h3>
+                    <ul>
+                        [cite_start]<li>Plastic Injection Molding [cite: 9]</li>
+                        [cite_start]<li>Aluminum Extrusions [cite: 9]</li>
+                        <li>Sheet Metal | CNC | [cite_start]EDM [cite: 9]</li>
+                        [cite_start]<li>GD&T (ASME Y14.5) [cite: 11]</li>
+                        [cite_start]<li>FAA Remote Pilot (sUAS) [cite: 11]</li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>
-                Feel free to reach out via email: <a href="mailto:enosh.reeder@example.com">enosh.reeder@example.com</a>
-            </p>
-            <p>
-                Or connect on <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-            </p>
+
+        <section id="projects">
+            <h2>Featured Projects & Experience</h2>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>Metrology Engineer</h3>
+                    <span class="company">QuantumScape | San Jose, CA (Aug 2023 - Present)</span>
+                </div>
+                <ul>
+                    <li>Designed and installed optical linescan inspection systems and web cleaners in a clean room environment for solid-state lithium battery separators.</li>
+                    <li>Analyzed X-ray basis weight gauge data in python and compared with data from a Keyence laser profiler and 3D microscope to evaluate sensor for new production line.</li>
+                    <li>Wrote SQL scripts to parse data from linescan inspection system and create log files.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>uPod Modular Cargo Platform</h3>
+                    <span class="company">Udelv | Burlingame, CA (Sep 2021 - Jul 2023)</span>
+                </div>
+                <img src="https://placehold.co/900x500/393E46/EEEEEE?text=uPod+Cargo+System" alt="uPod Robotic Cargo System">
+                <p>
+                    [cite_start]As Senior Mechatronics Engineer, I designed, built, and tested the uPod, a 4000lb & 340ft³ modular robotic cargo storage platform for an autonomous electric delivery vehicle. [cite: 12]
+                </p>
+                <ul>
+                    <li>Created a modular cargo door and shelving system, including structure, electronics, and sensor housings to optimize cargo capacity and cost.</li>
+                    <li>Determined and resolved areas of high friction on the cargo door system by analyzing oscilloscope data with python scripts.</li>
+                    <li>Researched materials and additives to achieve a product lifetime of millions of cycles.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>Aerial Wide Area Motion Imaging (WAMI) System</h3>
+                    <span class="company">Transparent Sky | Albuquerque, NM (Jul 2020 - Sep 2021)</span>
+                </div>
+                <img src="https://placehold.co/900x500/222831/EEEEEE?text=WAMI+Composite+Pod" alt="WAMI Composite Pod">
+                <p>
+                    [cite_start]As a Mechatronics Engineer, I prototyped a modular, aircraft-mounted gigapixel-class Wide Area Motion Imaging (WAMI) system enclosed in an aerodynamic composite pod. [cite: 13]
+                </p>
+                 <ul>
+                    [cite_start]<li>Recruited & mentored interns and junior engineers for design & manufacturing roles. [cite: 13]</li>
+                </ul>
+            </div>
+            
+            <div class="project">
+                <div class="project-header">
+                    <h3>NSF Research Internship</h3>
+                    <span class="company">UC San Diego Bio-Inspired Robotics Lab (Jun 2019 - Aug 2019)</span>
+                </div>
+                 <ul>
+                    [cite_start]<li>Designed everting soft robotics mechanisms for computer vision on an ROV for coral reef mapping and created point clouds with photogrammetry tools. [cite: 14]</li>
+                </ul>
+            </div>
+
         </section>
+
     </div>
+
     <footer>
-        &copy; 2025 Enosh Reeder. All rights reserved.
+        <div class="contact-info">
+            <p>Let's build something together.</p>
+            <h3>enosh.reeder@gmail.com</h3>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/enoshreeder" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Enosh-Reeder" target="_blank">GitHub</a>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
+```
