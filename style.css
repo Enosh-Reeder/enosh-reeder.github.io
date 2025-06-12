@@ -237,7 +237,23 @@ header.hero {
 .project-list-details p {
     margin-bottom: 1rem;
 }
+.project-list-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem; /* Adds space if items wrap */
+}
 
+.project-list-header h3 {
+    margin: 0;
+}
+
+.project-date {
+    font-style: italic;
+    color: #555;
+    white-space: nowrap; /* Prevents the date from breaking into two lines */
+}
 /* Responsive adjustments for the project list */
 @media (max-width: 600px) {
     .project-list-item {
