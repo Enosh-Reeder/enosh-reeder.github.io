@@ -73,17 +73,23 @@ header.hero {
 
 /* --- Project Button Styles --- */
 .btn-outline {
-    background: transparent; /* No background color initially */
-    color: var(--accent-color); /* Text color is your accent color */
-    border: 2px solid var(--accent-color); /* A border with your accent color */
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    background: transparent; /* Makes the button have a clear background */
+    color: var(--medium-color); /* Sets the text color to a darker grey */
+    border: 2px solid #ddd; /* A light grey border to start */
+    font-weight: bold;
+    padding: 10px 20px;
     margin-top: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* This makes all the changes smooth */
+    cursor: pointer; /* Changes the mouse to a pointer on hover */
 }
 
 .btn-outline:hover {
-    background: var(--accent-color); /* Fills with the accent color on hover */
-    color: #fff; /* Text becomes white on hover */
-    text-decoration: none;
+    border-color: var(--accent-color); /* The border color changes to your accent color */
+    color: var(--dark-color); /* The text gets slightly darker */
+    transform: translateY(-3px); /* Lifts the button up slightly */
+    box-shadow: 0 4px 15px rgba(0, 173, 181, 0.2); /* This adds the "glow" effect */
+    text-decoration: none; /* This ensures it never underlines */
 }
 
 /* --- Top Contact Info Styles --- */
