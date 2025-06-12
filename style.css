@@ -257,7 +257,24 @@ footer {
     margin: 0 15px;
     font-weight: bold;
 }
+.footer-contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Creates space between the items */
+    margin: 1.5rem 0; /* Adds space above and below the contact details */
+}
 
+.footer-contact-details a {
+    color: var(--light-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer-contact-details span {
+    color: var(--accent-color);
+    font-weight: bold;
+}
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .hero h1 {
