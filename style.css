@@ -73,23 +73,24 @@ header.hero {
 
 /* --- Project Button Styles --- */
 .btn-outline {
-    background: transparent; /* Makes the button have a clear background */
-    color: var(--medium-color); /* Sets the text color to a darker grey */
+    background: transparent; /* Ensures the background is always clear */
+    color: var(--medium-color); /* Sets the initial text color to a neutral dark grey */
     border: 2px solid #ddd; /* A light grey border to start */
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Increased padding to make the button larger */
     margin-top: 1rem;
-    border-radius: 5px;
-    transition: all 0.3s ease; /* This makes all the changes smooth */
-    cursor: pointer; /* Changes the mouse to a pointer on hover */
+    border-radius: 8px; /* Added rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer;
+    display: inline-block; /* Ensures proper spacing and layout */
 }
 
 .btn-outline:hover {
     border-color: var(--accent-color); /* The border color changes to your accent color */
-    color: var(--dark-color); /* The text gets slightly darker */
-    transform: translateY(-3px); /* Lifts the button up slightly */
-    box-shadow: 0 4px 15px rgba(0, 173, 181, 0.2); /* This adds the "glow" effect */
-    text-decoration: none; /* This ensures it never underlines */
+    color: var(--accent-color); /* The text color also changes to the accent color */
+    transform: translateY(-2px); /* Lifts the button up slightly */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* A very subtle shadow for depth */
+    text-decoration: none; /* Ensures it never underlines */
 }
 
 /* --- Top Contact Info Styles --- */
