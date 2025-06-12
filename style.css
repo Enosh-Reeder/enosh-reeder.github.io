@@ -78,7 +78,7 @@ header.hero {
 }
 
 /* --- Project Button Styles --- */
-.project a.btn {
+.btn-outline {
     background: transparent; /* Overrides any inherited background */
     color: var(--medium-color); /* Sets initial text color to neutral dark grey */
     border: 2px solid #ddd; /* A light grey border to start */
@@ -90,7 +90,7 @@ header.hero {
     transition: all 0.3s ease; /* Smooth transition for all hover effects */
 }
 
-.project a.btn:hover {
+.btn-outline:hover {
     background: transparent; /* Ensures background does NOT change on hover */
     color: var(--accent-color); /* Text color changes to your accent color */
     border-color: var(--accent-color); /* Border color also changes */
