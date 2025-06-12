@@ -71,6 +71,21 @@ header.hero {
     text-decoration: none;
 }
 
+/* --- Project Button Styles --- */
+.btn-outline {
+    background: transparent; /* No background color initially */
+    color: var(--accent-color); /* Text color is your accent color */
+    border: 2px solid var(--accent-color); /* A border with your accent color */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    margin-top: 1rem;
+}
+
+.btn-outline:hover {
+    background: var(--accent-color); /* Fills with the accent color on hover */
+    color: #fff; /* Text becomes white on hover */
+    text-decoration: none;
+}
+
 /* --- Top Contact Info Styles --- */
 .top-contact-info {
     margin: 1.5rem 0;
