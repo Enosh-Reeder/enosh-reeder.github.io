@@ -175,7 +175,13 @@ header.hero {
     margin: 1rem 0;
     display: block;
 }
-
+.project-btn {
+    background: var(--medium-color);
+    margin-top: 1rem;
+}
+.project-btn:hover {
+    background: var(--dark-color);
+}
 /* --- Footer --- */
 footer {
     text-align: center;
