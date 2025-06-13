@@ -160,9 +160,15 @@ header.hero {
 .profile-picture {
     width: 200px;
     height: 200px;
-    border-radius: 50%; /* This makes the image a circle */
-    object-fit: cover; /* Prevents the image from being stretched */
+    border-radius: 50%; /* This still makes it a circle */
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex-shrink: 0; /* Prevents the div from shrinking in the flex container */
+
+    /* New properties for the background image */
+    background-image: url('profile_pic.jpg');
+    background-size: cover; /* This is like 'object-fit: cover' */
+    background-position: center; /* Centers the image within the circle */
+    background-repeat: no-repeat;
 }
 .about-text {
     flex: 1; /* Allows the text to take up the remaining space */
