@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Projects | Enosh Reeder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/Icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Personal Projects</h1>
+        <p class="subtitle">A collection of builds from the garage, workshop, and kitchen table</p>
+        <div class="hero-buttons">
+            <a href="index.html" class="btn">Back to Portfolio</a>
+            <a href="projects.html" class="btn">All Projects</a>
+            <a href="#contact" class="btn">Contact</a>
+        </div>
+    </header>
+
+    <div class="container project-container">
+
+        <section id="3dprinter">
+            <h2>DIY 3D Printer</h2>
+            <img src="images/Personal/personal-3dprinter.png" alt="Upgraded 3D printer extruder assembly">
+            <p>
+                What started as a cheap kit quickly became a multi-year mechanical and software
+                engineering project in its own right.
+            </p>
+            <ul>
+                <li>After the stock hot end delivered inconsistent prints at 0.3&nbsp;mm layer heights,
+                    I tore it down and redesigned the entire hot end and direct-drive extrusion
+                    system from scratch in Autodesk Inventor, measuring every interface with
+                    digital calipers to ensure precise fit.</li>
+                <li>Printed the replacement parts on the printer itself &mdash; a satisfying
+                    bootstrap &mdash; then installed them and re-calibrated from scratch.</li>
+                <li>Through systematic tuning of temperatures, flow rates, retraction, and
+                    first-layer adhesion, brought the machine from unreliable 0.3&nbsp;mm prints
+                    to consistent 0.1&nbsp;mm layer heights.</li>
+                <li>Experimented with glass, Kapton tape, and PEI bed surfaces; settled on a
+                    glue-stick layer on a glass bed for the most reliable PLA adhesion and
+                    clean part release.</li>
+            </ul>
+        </section>
+
+        <section id="scooter">
+            <h2>Self-Balancing Scooter (Hackathon)</h2>
+            <div class="image-gallery">
+                <img src="images/Personal/port2020_p2_0.png" alt="Self-balancing scooter deck and wheel assembly">
+                <img src="images/Personal/port2020_p3_4.png" alt="Arduino and IMU control electronics">
+            </div>
+            <div class="image-gallery">
+                <img src="images/Personal/port2020_p3_2.png" alt="CIM motors and power electronics">
+                <img src="images/Personal/port2020_p3_3.png" alt="3D-printed wheel hub mount">
+            </div>
+            <p>
+                Built at a prototype hackathon: a self-balancing two-wheeled scooter oriented
+                sideways like a skateboard, reducing overall width compared to conventional
+                hoverboards while keeping the same riding mechanics.
+            </p>
+            <ul>
+                <li>Structural deck: two pieces of plywood (top and bottom plate) connected by
+                    eight 4-inch lengths of 80/20 aluminum extrusion as standoffs, providing
+                    a rigid but lightweight chassis.</li>
+                <li>Power: 12&nbsp;V 18&nbsp;Ah motorcycle-style SLA battery secured with aluminum
+                    angle brackets and a strap to the bottom plate.</li>
+                <li>Balance control: Arduino Uno connected to a combined gyro/accelerometer (IMU)
+                    reads the rider&rsquo;s lean angle; a PID control loop drives the motors proportionally
+                    &mdash; leaning forward accelerates, leaning back decelerates or reverses.</li>
+                <li>Safety: a weight-scale pressure sensor under one footpad acts as a dead-man
+                    switch &mdash; removing the foot de-powers the motors, preventing runaway.</li>
+                <li>Drive: two CIM motors run through ball-shift transmissions on each side;
+                    8-inch traction wheels provide the ground contact.</li>
+            </ul>
+        </section>
+
+        <section id="foundry">
+            <h2>Home Metal Foundry</h2>
+            <p>
+                Researched and built a small backyard foundry capable of melting aluminum and
+                other non-ferrous metals for casting experiments.
+            </p>
+            <ul>
+                <li>Fabricated the furnace body by packing a plaster/sand/water refractory
+                    mixture inside a steel bucket, creating an insulating liner with good
+                    thermal mass.</li>
+                <li>Welded a steel crucible from plate stock; used a ceramic tile as a lid.</li>
+                <li>Initial fuel: charcoal. To get enough airflow for melting temperatures,
+                    built a bellows from a salvaged PC power supply and server fan ducted
+                    through a metal pipe into a drilled hole near the base of the bucket.</li>
+                <li>Upgraded to propane for better efficiency and repeatability, fabricating
+                    a pressure-valve system to regulate fuel flow into the combustion chamber.</li>
+                <li>Future goal: electric resistance furnace with a PID temperature controller
+                    for precise, reproducible melt temperatures without combustion byproducts.</li>
+            </ul>
+        </section>
+
+        <section id="woodworking">
+            <h2>Woodworking</h2>
+            <div class="image-gallery">
+                <img src="images/Personal/port2020_p8_15.png" alt="Live-edge walnut coffee table">
+                <img src="images/Personal/20260423_094948.jpg" alt="Hand-carved bowl and cutting board">
+            </div>
+            <div class="image-gallery">
+                <img src="images/Personal/20260108_125432.jpg" alt="Custom wooden ring box with magnetic clasp">
+            </div>
+            <ul>
+                <li><strong>Live-edge coffee table:</strong> shaped, sanded, and finished a
+                    large natural-edge walnut slab into a coffee table with a lower shelf.</li>
+                <li><strong>Hand-carved bowl &amp; cutting board:</strong> carved from raw stock using
+                    draw knives and gouges; finished with food-safe oil.</li>
+                <li><strong>Ring box:</strong> precision-fit wooden box with magnetic clasp and
+                    foam-lined interior, built as a custom jewelry presentation piece.</li>
+            </ul>
+        </section>
+
+        <section id="upholstery">
+            <h2>Upholstered Headboard</h2>
+            <div class="image-gallery">
+                <img src="images/Personal/20231119_222446.jpg" alt="Finished geometric upholstered headboard">
+                <img src="images/Personal/20231119_151905.jpg" alt="Headboard foam panels before upholstering">
+            </div>
+            <ul>
+                <li>Designed and built a king-size upholstered headboard with a geometric
+                    diamond panel layout.</li>
+                <li>Cut and shaped foam panels, wrapped each in batting, then hand-stitched
+                    faux-leather fabric over each panel with button tufting at panel joints.</li>
+                <li>Mounted the finished panels to a plywood backer, attached French cleats
+                    to the wall for secure, level installation.</li>
+            </ul>
+        </section>
+
+        <section id="other">
+            <h2>Other Builds</h2>
+            <div class="image-gallery">
+                <img src="images/Personal/IMG_20190908_161903_1.jpg" alt="TIG-welded steel bicycle frame">
+                <img src="images/Personal/personal-surfboard.png" alt="Hand-shaped surfboard">
+            </div>
+            <div class="image-gallery">
+                <img src="images/Personal/personal-subwoofer.png" alt="DIY subwoofer enclosure">
+                <img src="images/Aero/personal-winglet.png" alt="NACA 4412 winglet CAD study">
+            </div>
+            <ul>
+                <li><strong>Steel bicycle frame:</strong> designed geometry and TIG-welded a
+                    single-speed steel road frame, including fork, dropouts, and head-tube gussets.</li>
+                <li><strong>Surfboard:</strong> hand-shaped a shortboard from a foam blank;
+                    glassed with epoxy and fiberglass.</li>
+                <li><strong>Subwoofer enclosure:</strong> designed and built a ported MDF
+                    enclosure tuned to the driver&rsquo;s resonance frequency for extended
+                    low-frequency response.</li>
+                <li><strong>PC build:</strong> custom water-cooled desktop workstation.</li>
+                <li><strong>NACA 4412 winglet (CFD study):</strong> modeled a tip winglet in
+                    SolidWorks and ran lift/drag trade studies in CFD to quantify induced-drag
+                    reduction versus span increase.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer id="contact">
+        <p class="footer-cta">Let's build something together.</p>
+        <div class="footer-contact-details">
+            <a href="mailto:enosh.reeder@gmail.com">enosh.reeder@gmail.com</a>
+            <span>&bull;</span>
+            <a href="tel:+18052347974">+1 (805) 234-7974</a>
+        </div>
+        <div class="footer-links">
+            <a href="https://linkedin.com/in/enoshreeder" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Enosh-Reeder" target="_blank">GitHub</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn">Toggle Dark Mode</button>
+        <p class="footer-copyright">&copy; 2026 Enosh Reeder. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

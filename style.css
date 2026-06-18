@@ -165,7 +165,7 @@ header.hero {
     flex-shrink: 0; /* Prevents the div from shrinking in the flex container */
 
     /* New properties for the background image */
-    background-image: url('profile_pic.jpg');
+    background-image: url('images/Icons/profile_pic.jpg');
     background-size: cover; /* This is like 'object-fit: cover' */
     background-position: center; /* Centers the image within the circle */
     background-repeat: no-repeat;

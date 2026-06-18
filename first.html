@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST Robotics Team 171 | Enosh Reeder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/Icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>FIRST Robotics Team 171</h1>
+        <p class="subtitle">FRC Robot Design &mdash; Climbing System &amp; Rocker-Bogie Drivetrain</p>
+        <div class="hero-buttons">
+            <a href="index.html" class="btn">Back to Portfolio</a>
+            <a href="projects.html" class="btn">All Projects</a>
+            <a href="#contact" class="btn">Contact</a>
+        </div>
+    </header>
+
+    <div class="container project-container">
+        <section id="summary">
+            <h2>Overview</h2>
+            <p>
+                As a member and eventually president of FIRST Robotics Competition Team 171,
+                I contributed mechanical design work across multiple seasons. Two projects
+                stand out for their technical depth: a high-torque climbing system that lifts
+                the full robot weight in seconds, and a pneumatically actuated rocker-bogie
+                drivetrain inspired by NASA planetary rovers.
+            </p>
+            <div class="image-gallery">
+                <img src="images/FIRST/first-robot.png" alt="FRC competition robot">
+                <img src="images/FIRST/first-climbing.png" alt="FRC robot mid-climb">
+            </div>
+        </section>
+
+        <section id="climbing">
+            <h3>Climbing System</h3>
+            <div class="image-gallery">
+                <img src="images/FIRST/port2020_p6_11.png" alt="Robot climbing at competition">
+                <img src="images/FIRST/port2020_p7_12.png" alt="Climbing mechanism detail">
+            </div>
+            <p>
+                As project manager for the climbing subsystem, I was responsible for the full
+                mechanical design from motor selection through final assembly.
+            </p>
+            <ul>
+                <li>Selected two CIM motors paired with VEX VersaPlanetary gearboxes to achieve
+                    a 49:1 gear ratio, providing the torque necessary to lift the robot's full
+                    competition weight against gravity in a controlled, repeatable climb.</li>
+                <li>Designed 3D-printed motor-mounting brackets using Autodesk Inventor,
+                    measured from the robot's main structure for precise fit.</li>
+                <li>Engineered custom ratcheting gears to lock the drivetrain in place after
+                    the robot reached the target height, preventing it from sliding back down
+                    under load &mdash; a critical requirement for a held-position end-game score.</li>
+                <li>Machined the central spool from a 2.5-inch diameter Delrin cylinder,
+                    hex-bored to mate with the motor hex shafts on each side. Wrapped the
+                    spool in industrial Velcro to provide reliable grip on the climbing rope
+                    without damage to the rope over repeated cycles.</li>
+            </ul>
+        </section>
+
+        <section id="rocker-bogie">
+            <h3>Rocker-Bogie Drivetrain</h3>
+            <div class="image-gallery">
+                <img src="images/FIRST/port2020_p4_6.png" alt="Assembled rocker-bogie drivetrain">
+                <img src="images/FIRST/port2020_p4_7.png" alt="Rocker-bogie prototype detail">
+            </div>
+            <ul>
+                <li>Designed a six-wheel rocker-bogie drivetrain adapted from the passive
+                    suspension geometry used by NASA Mars rovers, applied to an FRC
+                    competition robot to improve obstacle traversal.</li>
+                <li>Created the initial 2D plate geometry in CAD, exported as a DXF, and
+                    laser-cut prototype bogie plates from acrylic sheet for rapid physical
+                    validation of the geometry and chain-sprocket clearances.</li>
+                <li>Iterated on chain clearance after the first acrylic prototype revealed
+                    interference; revised the model and cut a second acrylic round to confirm
+                    the fix before committing to metal.</li>
+                <li>Final production bogie plates were waterjet-cut from &frac14;-inch aluminum
+                    plate stock, providing the strength and weight budget needed for the
+                    competition robot.</li>
+                <li>Integrated single-sided pneumatic cylinders: when un-pressurized, the bogie
+                    passively articulates to maintain ground contact across variable terrain
+                    (all six wheels always grounded); when activated, the cylinder drives the
+                    bogie upward, lifting the robot onto the two bogie wheels to allow the
+                    six-wheel drive to climb over taller obstacles that a rigid chassis
+                    could not clear.</li>
+            </ul>
+        </section>
+
+        <section id="leadership">
+            <h3>Team Leadership</h3>
+            <p>
+                Beyond the individual mechanisms, serving as team president taught project
+                management, timeline discipline, and cross-functional coordination across
+                mechanical, electrical, and programming subteams &mdash; all under the fixed
+                six-week FRC build season. The competitive pressure of designing, building,
+                and shipping a working robot on a hard deadline became a template for
+                how I approach all engineering work.
+            </p>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <p class="footer-cta">Let's build something together.</p>
+        <div class="footer-contact-details">
+            <a href="mailto:enosh.reeder@gmail.com">enosh.reeder@gmail.com</a>
+            <span>&bull;</span>
+            <a href="tel:+18052347974">+1 (805) 234-7974</a>
+        </div>
+        <div class="footer-links">
+            <a href="https://linkedin.com/in/enoshreeder" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Enosh-Reeder" target="_blank">GitHub</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn">Toggle Dark Mode</button>
+        <p class="footer-copyright">&copy; 2026 Enosh Reeder. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WAMI System | Project Details</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="images/Icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Icons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="project-page.css">
 </head>
@@ -27,28 +27,75 @@
         <section id="summary">
             <h2>Project Summary</h2>
             <p>
-                 As a Mechatronics Engineer at Transparent Sky, I prototyped a modular, aircraft-mounted gigapixel-class Wide Area Motion Imaging (WAMI) system. The core of the project involved enclosing the complex sensor suite in a custom-designed aerodynamic composite pod.
+                As a Mechatronics Engineer at Transparent Sky, I prototyped a modular,
+                aircraft-mounted gigapixel-class Wide Area Motion Imaging (WAMI) system.
+                The system mounts under a Cessna and captures high-resolution wide-area imagery
+                for persistent surveillance and motion tracking. My focus was the aerodynamic
+                composite pod enclosure, multi-camera housing, and the electromechanical integration
+                of the sensor suite.
             </p>
+            <div class="image-gallery">
+                <img src="images/TS/wami-cessna.jpg" alt="Cessna with WAMI pod mounted underneath">
+                <img src="images/TS/wami-pod.jpg" alt="WAMI aerodynamic composite pod exterior">
+            </div>
         </section>
 
-        <section id="design-manufacturing">
-            <h3>Design for Manufacturing</h3>
-             <img src="https://placehold.co/900x400/cccccc/333?text=Composite+Pod+Design" alt="Composite Pod Design">
-            <p>
-                The primary challenge was designing the composite pod for both aerodynamic efficiency and manufacturability, ensuring the sensitive imaging equipment was secure and functional during flight.
-            </p>
+        <section id="pod-design">
+            <h3>Aerodynamic Composite Pod</h3>
+            <img src="images/TS/wami-cad.png" alt="WAMI pod CAD cutaway showing camera layout">
+            <ul>
+                <li>Designed an aerodynamic fiberglass composite pod to house the full WAMI camera
+                    array, optimized for low drag and thermal management at cruise altitude.</li>
+                <li>Created detailed SolidWorks models of the pod structure, internal camera mounts,
+                    vibration isolators, and cable routing to ensure electromagnetic compatibility.</li>
+                <li>Coordinated with composite fabrication vendors to translate the CAD design into
+                    a flight-worthy shell within weight and cost constraints.</li>
+            </ul>
+        </section>
+
+        <section id="camera-housing">
+            <h3>Multi-Camera Housing &amp; FOV Optimization</h3>
+            <div class="image-gallery">
+                <img src="images/TS/wami-camera-housing.png" alt="3D printed camera housing assembly">
+                <img src="images/TS/wami-fov.png" alt="WAMI pod CAD render showing camera fields of view">
+            </div>
+            <ul>
+                <li>Designed and 3D-printed modular camera mount housings that allow rapid sensor
+                    swap-out for different mission payloads without structural disassembly.</li>
+                <li>Optimized individual camera pointing angles to maximize overlapping coverage
+                    while maintaining a seamless composite gigapixel mosaic.</li>
+                <li>Validated the field-of-view geometry in SolidWorks against ground-sampling
+                    distance requirements at target operating altitudes.</li>
+            </ul>
+        </section>
+
+        <section id="interior">
+            <h3>Pod Interior &amp; Systems Integration</h3>
+            <img src="images/TS/wami-interior.jpg" alt="Inside view of the WAMI pod showing sensors and electronics">
+            <ul>
+                <li>Routed power, data, and cooling lines inside the pod with serviceability in mind:
+                    all harnesses are labeled and accessible through removable panels.</li>
+                <li>Integrated thermal management to keep cameras and compute hardware within
+                    operating temperature across a wide range of ambient conditions.</li>
+            </ul>
         </section>
 
         <section id="leadership">
-            <h3>Mentorship & Leadership</h3>
+            <h3>Team &amp; Mentorship</h3>
             <ul>
-                <li>Recruited & mentored interns and junior engineers for design & manufacturing roles, fostering a collaborative and productive team environment.</li>
+                <li>Recruited and mentored interns and junior engineers for design and manufacturing
+                    roles, establishing a peer-review workflow for CAD releases.</li>
             </ul>
         </section>
-        
+
         <section id="conclusion">
-            <h3>Conclusion</h3>
-            <p>This project successfully delivered a functional WAMI prototype and demonstrated effective team leadership and rapid prototyping skills in an aerospace context.</p>
+            <h3>Outcome</h3>
+            <p>
+                The prototype delivered a flight-ready WAMI enclosure that successfully integrated
+                the full camera array and supporting electronics. The project demonstrated rapid
+                mechanical prototyping, composite design, and cross-disciplinary systems integration
+                under tight aerospace constraints.
+            </p>
         </section>
     </div>
 
@@ -64,7 +111,7 @@
             <a href="https://github.com/Enosh-Reeder" target="_blank">GitHub</a>
         </div>
         <button id="theme-toggle" class="theme-toggle-btn">Toggle Dark Mode</button>
-        <p class="footer-copyright">&copy; 2025 Enosh Reeder. All rights reserved.</p>
+        <p class="footer-copyright">&copy; 2026 Enosh Reeder. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

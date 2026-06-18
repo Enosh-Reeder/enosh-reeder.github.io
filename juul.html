@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUUL Labs — Robotic Test Platform | Enosh Reeder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/Icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Robotic Test Platform &amp; Automation</h1>
+        <p class="subtitle">JUUL Labs &mdash; Internal Tools &amp; Test Team (Jul 2023 &ndash; Present)</p>
+        <div class="hero-buttons">
+            <a href="index.html" class="btn">Back to Portfolio</a>
+            <a href="projects.html" class="btn">All Projects</a>
+            <a href="#contact" class="btn">Contact</a>
+        </div>
+    </header>
+
+    <div class="container project-container">
+        <section id="summary">
+            <h2>Project Summary</h2>
+            <p>
+                As a mechatronics engineer on the internal tools &amp; test team at JUUL Labs, I
+                design, build, and deploy automated systems that accelerate R&amp;D throughput for
+                aerosol-chemistry and device-reliability testing. The work spans mechanical design,
+                embedded electronics, robotics software, and data-science pipelines.
+            </p>
+        </section>
+
+        <section id="robotics">
+            <h3>UR10e Robotic Work Cell</h3>
+            <video class="project-video" controls muted loop playsinline autoplay>
+                <source src="images/Robot/20260421_182339_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <ul>
+                <li>Engineered a UR10e collaborative-robot work cell integrated with ROS2/MoveIt for
+                    repeatable, hands-free sample loading and device actuation during aerosol-chemistry tests.</li>
+                <li>Added Intel RealSense depth cameras for vision-guided pick-and-place, enabling
+                    sub-millimeter positional repeatability across device variants.</li>
+                <li>Designed custom end-effectors and fixturing machined in-house; reduced manual
+                    operator time per test run by &gt;60%.</li>
+            </ul>
+        </section>
+
+        <section id="ai-pipeline">
+            <h3>AI Session-Analysis Pipeline</h3>
+            <ul>
+                <li>Built an end-to-end Python pipeline (Pandas, scikit-learn, SQL) that ingests raw
+                    puffing-session telemetry, detects anomalies, and classifies device behavior &mdash;
+                    cutting triage time from days to hours.</li>
+                <li>Integrated FTIR and mass-spectrometer instruments over GPIB/USB, automating
+                    data acquisition and correlation with device session logs.</li>
+                <li>Deployed a lightweight ML model for real-time go/no-go quality checks,
+                    replacing manual review for &gt;90% of routine test runs.</li>
+            </ul>
+        </section>
+
+        <section id="electronics">
+            <h3>PCB Design &amp; Nitinol Fixtures</h3>
+            <ul>
+                <li>Designed multi-layer Altium PCBs for custom test fixtures: USB-C power delivery
+                    conditioning, CAN-bus breakout boards, and sensor-data-acquisition front ends.</li>
+                <li>Prototyped nitinol shape-memory-alloy actuators to drive repeatable button-press
+                    mechanisms, eliminating wear-related variance over millions of actuation cycles.</li>
+                <li>Fabricated functional-checkout-test (FCT) fixtures used on the manufacturing
+                    line to verify electrical and mechanical compliance of finished devices.</li>
+            </ul>
+        </section>
+
+        <section id="in-house-toxicology">
+            <h3>In-House Toxicology Rig</h3>
+            <ul>
+                <li>Collaborated with chemistry team to design and build a closed-loop aerosol
+                    exposure rig for in-house cellular toxicology studies, replacing outsourced
+                    contract-lab testing and shortening feedback cycles from weeks to days.</li>
+                <li>Integrated peristaltic pumps, mass-flow controllers, and custom impinger
+                    assemblies under LabVIEW DAQ control with automated safety interlocks.</li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h3>Impact</h3>
+            <p>
+                The suite of automated tools developed on this team directly accelerates JUUL's
+                R&amp;D velocity: faster test cycles, richer datasets, and fewer manual touch-points
+                across chemistry, reliability, and regulatory-compliance workflows.
+            </p>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <p class="footer-cta">Let's build something together.</p>
+        <div class="footer-contact-details">
+            <a href="mailto:enosh.reeder@gmail.com">enosh.reeder@gmail.com</a>
+            <span>&bull;</span>
+            <a href="tel:+18052347974">+1 (805) 234-7974</a>
+        </div>
+        <div class="footer-links">
+            <a href="https://linkedin.com/in/enoshreeder" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Enosh-Reeder" target="_blank">GitHub</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn">Toggle Dark Mode</button>
+        <p class="footer-copyright">&copy; 2026 Enosh Reeder. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

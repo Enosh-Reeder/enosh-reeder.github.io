@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>uPod Cargo Platform | Project Details</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="images/Icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Icons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="project-page.css">
 </head>
@@ -27,30 +27,51 @@
         <section id="summary">
             <h2>Project Summary</h2>
             <p>
-                As Senior Mechatronics Engineer at Udelv, I was integral to the team that designed, built, and tested the uPod, a 4000lb & 340ft³ modular robotic cargo storage platform for an autonomous electric delivery vehicle. My focus was on the electromechanical systems that managed the cargo.
+                As Senior Mechatronics Engineer at Udelv, I was integral to the team that designed,
+                built, and tested the uPod — a 4,000 lb / 340 ft³ modular robotic cargo storage
+                platform for an autonomous electric delivery vehicle. My focus was the electromechanical
+                systems managing the cargo: door mechanisms, shelving, electronics, and data analysis.
             </p>
+            <div class="image-gallery">
+                <img src="images/Udelv/upod-vehicle.jpg" alt="uPod-equipped Udelv delivery vehicle">
+                <img src="images/Udelv/upod-transporter.jpg" alt="Udelv Transporter vehicle with loaded uPod">
+            </div>
         </section>
 
         <section id="mechanical-design">
-            <h3>Mechanical Design & Systems</h3>
-            <img src="https://placehold.co/900x400/cccccc/333?text=CAD+Render+of+Shelving" alt="CAD Render of Shelving">
+            <h3>Mechanical Design &amp; Systems</h3>
+            <img src="images/Udelv/upod-frame.png" alt="uPod frame and shelving structure">
             <ul>
-                <li>Created a modular cargo door and shelving system, structure, electronics and sensor housings, and mechanisms to optimize cargo capacity and cost.</li>
-                <li>Researched materials and additives to achieve a product lifetime of millions of cycles.</li>
+                <li>Created a modular cargo door and shelving system including structure, electronics,
+                    and sensor housings to optimize cargo capacity and cost.</li>
+                <li>Designed door mechanisms for reliable operation across millions of open/close
+                    cycles; researched materials and additives to meet product-lifetime targets.</li>
+                <li>Managed the BOM and revision history in SolidWorks PDM, coordinating design
+                    changes across mechanical and electrical sub-teams.</li>
             </ul>
         </section>
 
         <section id="analysis">
-            <h3>Friction Analysis & Resolution</h3>
-             <img src="https://placehold.co/900x400/cccccc/333?text=Oscilloscope+Data+Graph" alt="Graph of oscilloscope data">
+            <h3>Friction Analysis &amp; Resolution</h3>
+            <img src="images/Udelv/juul_image36.png" alt="Python friction analysis chart from oscilloscope data">
             <ul>
-                <li>Determined and resolved areas of high friction on the cargo door system by analyzing oscilloscope data with python scripts.</li>
+                <li>Identified and resolved areas of high friction on the cargo door system by
+                    capturing motor-current waveforms with an oscilloscope and analyzing them
+                    with Python scripts to pinpoint binding locations.</li>
+                <li>Correlated friction measurements to specific door positions, enabling targeted
+                    component adjustments that met the cycle-life specification.</li>
             </ul>
         </section>
-        
+
         <section id="conclusion">
-            <h3>Conclusion</h3>
-            <p>This project was a comprehensive exercise in mechatronic design for a real-world autonomous vehicle application, successfully balancing cost, durability, and functionality.</p>
+            <h3>Outcome</h3>
+            <p>
+                The uPod successfully went from prototype to production-intent design, enabling
+                Udelv's Transporter vehicle to carry fully loaded cargo platforms autonomously.
+                The project was a comprehensive exercise in mechatronic design for a real-world
+                autonomous-vehicle application, balancing cost, durability, and functionality
+                under tight mass and volume constraints.
+            </p>
         </section>
     </div>
 
@@ -66,7 +87,7 @@
             <a href="https://github.com/Enosh-Reeder" target="_blank">GitHub</a>
         </div>
         <button id="theme-toggle" class="theme-toggle-btn">Toggle Dark Mode</button>
-        <p class="footer-copyright">&copy; 2025 Enosh Reeder. All rights reserved.</p>
+        <p class="footer-copyright">&copy; 2026 Enosh Reeder. All rights reserved.</p>
     </footer>
     
     <script src="script.js"></script>

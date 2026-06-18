@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumScape — Battery Inspection System | Enosh Reeder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/Icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Roll-to-Roll Battery Inspection System</h1>
+        <p class="subtitle">QuantumScape &mdash; Metrology &amp; Inspection (Sep 2022 &ndash; Jul 2023)</p>
+        <div class="hero-buttons">
+            <a href="index.html" class="btn">Back to Portfolio</a>
+            <a href="projects.html" class="btn">All Projects</a>
+            <a href="#contact" class="btn">Contact</a>
+        </div>
+    </header>
+
+    <div class="container project-container">
+        <section id="summary">
+            <h2>Project Summary</h2>
+            <img src="images/QS/large_Quantumscape_company_a7a5ee7567.png" alt="QuantumScape facility">
+            <p>
+                At QuantumScape, a company developing solid-state lithium-metal batteries, I implemented
+                automated inspection and metrology systems for the cleanroom roll-to-roll electrode
+                manufacturing line. The core challenge was achieving reliable defect detection on
+                optically challenging thin-film materials at production line speeds.
+            </p>
+        </section>
+
+        <section id="linescan">
+            <h3>Linescan Camera Systems</h3>
+            <ul>
+                <li>Deployed high-resolution linescan cameras and structured-light illumination across
+                    multiple stations on the roll-to-roll line to capture full-web imagery at speed.</li>
+                <li>Calibrated optics, lighting, and web-tension controls to minimize motion blur
+                    and achieve consistent contrast across reflective and translucent electrode materials.</li>
+                <li>Integrated cameras with PLC line-speed encoders for pixel-accurate image stitching
+                    and defect localization referenced to web coordinates.</li>
+            </ul>
+        </section>
+
+        <section id="cv">
+            <h3>Computer Vision Defect Detection</h3>
+            <ul>
+                <li>Developed a Python/OpenCV pipeline to automatically segment, classify, and log
+                    surface defects (pinholes, edge tears, coating voids) in real time.</li>
+                <li>Trained and validated a machine-learning classifier achieving &gt;75% recall
+                    and &gt;75% precision on held-out production data, validated against expert
+                    manual review.</li>
+                <li>Built a review dashboard that surfaced flagged regions to operators with
+                    annotated image crops, reducing manual review burden by more than half.</li>
+            </ul>
+        </section>
+
+        <section id="metrology">
+            <h3>Dimensional Metrology Integration</h3>
+            <ul>
+                <li>Integrated laser-displacement sensors for real-time electrode thickness mapping,
+                    enabling SPC alerts before out-of-spec material reached downstream assembly.</li>
+                <li>Authored Python data-pipeline scripts to merge vision, thickness, and process
+                    telemetry into a unified per-roll quality record stored in a SQL database.</li>
+                <li>Worked closely with process and materials engineers to translate defect-taxonomy
+                    feedback into closed-loop process improvements.</li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h3>Impact</h3>
+            <p>
+                The inspection system provided QuantumScape's production team with automated,
+                quantitative quality data at every roll, enabling faster yield-loss root-cause
+                analysis and accelerating the iteration cycle for their next-generation solid-state
+                battery chemistry.
+            </p>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <p class="footer-cta">Let's build something together.</p>
+        <div class="footer-contact-details">
+            <a href="mailto:enosh.reeder@gmail.com">enosh.reeder@gmail.com</a>
+            <span>&bull;</span>
+            <a href="tel:+18052347974">+1 (805) 234-7974</a>
+        </div>
+        <div class="footer-links">
+            <a href="https://linkedin.com/in/enoshreeder" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Enosh-Reeder" target="_blank">GitHub</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn">Toggle Dark Mode</button>
+        <p class="footer-copyright">&copy; 2026 Enosh Reeder. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

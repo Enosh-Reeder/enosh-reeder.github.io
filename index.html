@@ -7,10 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="images/Icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Icons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,7 +22,7 @@
 
         <div class="hero-buttons">
             <a href="projects.html" class="btn">All Projects</a>
-            <a href="resume.pdf" class="btn" target="_blank" >Download Résumé</a>
+            <a href="Enosh Reeder Resume.pdf" class="btn" target="_blank">Download Résumé</a>
             <a href="#contact" class="btn">Contact</a>
         </div>
     </header>
@@ -53,31 +53,43 @@
                     <div class="skill-category">
                         <h3>Design & Software</h3>
                         <ul>
-                            <li>SolidWorks CAD/CAM/FEA/PDM </li>
-                            <li>Altium PCB Design and Layout </li>
-                            <li>Autodesk Fusion 360/Inventor </li>
-                            <li>Python | C++ | MATLAB | SQL </li>
-                            <li>Arduino | G-Code | Linux </li>
+                            <li>SolidWorks CAD/CAM/FEA/PDM</li>
+                            <li>Altium PCB Design and Layout</li>
+                            <li>Autodesk Fusion 360 / Inventor</li>
+                            <li>Python | C++ | MATLAB | SQL</li>
+                            <li>ROS2 / MoveIt | LabVIEW</li>
+                            <li>ML / Computer Vision (OpenCV)</li>
+                            <li>Star-CCM+ CFD | XFLR5</li>
+                            <li>Arduino | G-Code | Linux</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>Fabrication & Machining</h3>
                         <ul>
-                            <li>3D Printing FFF/FDM/SLA </li>
-                            <li>Composite Manufacturing </li>
-                            <li>Laser Cutting & Engraving </li>
-                            <li>Manual & CNC Machining </li>
-                            <li>PCB & Cable Harnesses </li>
+                            <li>3D Printing FFF / SLA / MJF</li>
+                            <li>Composite Manufacturing</li>
+                            <li>Laser Cutting & Engraving</li>
+                            <li>Waterjet Cutting</li>
+                            <li>Manual & CNC Machining</li>
+                            <li>Welding | Casting | Brazing</li>
+                            <li>PCB & Cable Harnesses</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>DFM/DFA & Prototyping</h3>
                         <ul>
-                            <li>Plastic Injection Molding </li>
-                            <li>Aluminum Extrusions </li>
-                            <li>Sheet Metal | CNC | EDM </li>
-                            <li>GD&T (ASME Y14.5) </li>
-                            <li>FAA Remote Pilot (sUAS) </li>
+                            <li>Plastic Injection Molding</li>
+                            <li>Aluminum Extrusions</li>
+                            <li>Sheet Metal | CNC | EDM</li>
+                            <li>GD&T (ASME Y14.5)</li>
+                            <li>FAA Remote Pilot (sUAS)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>English (Native)</li>
+                            <li>Mandarin (Fluent)</li>
                         </ul>
                     </div>
                 </div>
@@ -88,11 +100,40 @@
 
             <div class="project">
                 <div class="project-header">
+                    <h3>Robotic Test Platform & Automation Systems</h3>
+                    <span class="company">JUUL Labs | San Francisco, CA (Jul 2023 – Present)</span>
+                </div>
+                <video class="project-video" controls muted loop playsinline autoplay>
+                    <source src="images/Robot/20260421_182339_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>
+                    On the internal tools &amp; test team at JUUL Labs, I engineered a UR10e robotic work cell using ROS2/MoveIt and Intel RealSense for automated aerosol-chemistry testing, built an AI-driven session-analysis pipeline (Python, SQL, ML), integrated FTIR/mass-spec instruments, and designed custom Altium PCBs and nitinol-actuated test fixtures.
+                </p>
+                <a href="juul.html" class="btn btn-outline">Project Details</a>
+                <a href="projects.html" class="btn btn-outline">All Projects</a>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>Roll-to-Roll Battery Inspection System</h3>
+                    <span class="company">QuantumScape | San Jose, CA (Sep 2022 – Jul 2023)</span>
+                </div>
+                <img src="images/QS/large_Quantumscape_company_a7a5ee7567.png" alt="QuantumScape facility">
+                <p>
+                    At QuantumScape I implemented cleanroom linescan camera systems and computer-vision defect-detection algorithms (&gt;75% recall &amp; precision) for solid-state battery electrode inspection, reducing manual review burden and accelerating production yield analysis.
+                </p>
+                <a href="quantumscape.html" class="btn btn-outline">Project Details</a>
+                <a href="projects.html" class="btn btn-outline">All Projects</a>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
                     <h3>Modular Robotic Cargo Platform "Iris"</h3>
-                    <span class="company">Udelv | Burlingame, CA (Sep 2021 - Jul 2023)</span>
+                    <span class="company">Udelv | Burlingame, CA (Sep 2021 – Jul 2022)</span>
                 </div>
                     <video class="project-video" controls muted loop playsinline autoplay>
-                        <source src="upod-video.mp4" type="video/mp4">
+                        <source src="images/Udelv/upod-video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 <p>
@@ -113,7 +154,7 @@
                     <h3>Aerial Wide Area Motion Imaging (WAMI) System</h3>
                     <span class="company">Transparent Sky | Albuquerque, NM (Jul 2020 - Sep 2021)</span>
                 </div>
-                <img src="https://placehold.co/900x500/222831/EEEEEE?text=WAMI+Composite+Pod" alt="WAMI Composite Pod">
+                <img src="images/TS/wami-cessna.jpg" alt="Cessna aircraft with WAMI composite pod mounted">
                 <p>
                     As a mechatronics engineer, I prototyped a modular, aircraft-mounted gigapixel-class Wide Area Motion Imaging (WAMI) system enclosed in an aerodynamic composite pod. 
                 </p>
@@ -139,7 +180,7 @@
             <a href="https://github.com/Enosh-Reeder" target="_blank">GitHub</a>
         </div>
         <button id="theme-toggle" class="theme-toggle-btn">Toggle Dark Mode</button>
-        <p class="footer-copyright">&copy; 2025 Enosh Reeder. All rights reserved.</p>
+        <p class="footer-copyright">&copy; 2026 Enosh Reeder. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
