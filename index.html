@@ -49,49 +49,58 @@
                 </div>
                 
                 <h2>Technical Skills</h2>
-                <div class="skill-matrix">
-                    <div class="skill-category">
-                        <h3>Design & Software</h3>
+                <div class="skills-accordion">
+
+                    <details class="skill-group" open>
+                        <summary>Design</summary>
                         <ul>
-                            <li>SolidWorks CAD/CAM/FEA/PDM</li>
-                            <li>Altium PCB Design and Layout</li>
-                            <li>Autodesk Fusion 360 / Inventor</li>
+                            <li>SolidWorks (CAD / CAM / FEA / PDM)</li>
+                            <li>Autodesk Fusion 360 / Inventor / HSM</li>
+                            <li>Altium PCB Design &amp; Layout</li>
+                        </ul>
+                    </details>
+
+                    <details class="skill-group">
+                        <summary>Software</summary>
+                        <ul>
                             <li>Python | C++ | MATLAB | SQL</li>
                             <li>ROS2 / MoveIt | LabVIEW</li>
                             <li>ML / Computer Vision (OpenCV)</li>
+                            <li>Linux | Arduino | G-code</li>
                             <li>Star-CCM+ CFD | XFLR5</li>
-                            <li>Arduino | G-Code | Linux</li>
                         </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Fabrication & Machining</h3>
+                    </details>
+
+                    <details class="skill-group">
+                        <summary>Fabrication</summary>
                         <ul>
-                            <li>3D Printing FFF / SLA / MJF</li>
-                            <li>Composite Manufacturing</li>
-                            <li>Laser Cutting & Engraving</li>
-                            <li>Waterjet Cutting</li>
-                            <li>Manual & CNC Machining</li>
-                            <li>Welding | Casting | Brazing</li>
-                            <li>PCB & Cable Harnesses</li>
+                            <li>CNC Lathe / Mill / Router</li>
+                            <li>Waterjet &amp; Laser Cutting</li>
+                            <li>FFF / FDM / SLA / MJF 3D Printing</li>
+                            <li>Carbon Fiber &amp; Fiberglass Composites</li>
+                            <li>Soldering | MIG / SMA Welding | Casting | Brazing</li>
+                            <li>PCB Assembly &amp; Cable Harnesses</li>
                         </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>DFM/DFA & Prototyping</h3>
+                    </details>
+
+                    <details class="skill-group">
+                        <summary>DFM / DFA</summary>
                         <ul>
-                            <li>Plastic Injection Molding</li>
-                            <li>Aluminum Extrusions</li>
-                            <li>Sheet Metal | CNC | EDM</li>
-                            <li>GD&T (ASME Y14.5)</li>
+                            <li>Injection Molding | Sheet Metal | EDM</li>
+                            <li>Aluminum Extrusion | CNC</li>
+                            <li>GD&amp;T (ASME Y14.5)</li>
+                        </ul>
+                    </details>
+
+                    <details class="skill-group">
+                        <summary>Certifications &amp; Languages</summary>
+                        <ul>
                             <li>FAA Remote Pilot (sUAS)</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Languages</h3>
-                        <ul>
                             <li>English (Native)</li>
-                            <li>Mandarin (Fluent)</li>
+                            <li>Mandarin Chinese (Fluent)</li>
                         </ul>
-                    </div>
+                    </details>
+
                 </div>
             </section>
 
@@ -101,14 +110,14 @@
             <div class="project">
                 <div class="project-header">
                     <h3>Robotic Test Platform & Automation Systems</h3>
-                    <span class="company">JUUL Labs | San Francisco, CA (Jul 2023 – Present)</span>
+                    <span class="company">JUUL Labs | San Francisco, CA (Aug 2024 – Current)</span>
                 </div>
                 <video class="project-video" controls muted loop playsinline autoplay>
-                    <source src="images/Robot/20260421_182339_1.mp4" type="video/mp4">
+                    <source src="images/Robot/Robot_arm.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p>
-                    On the internal tools &amp; test team at JUUL Labs, I engineered a UR10e robotic work cell using ROS2/MoveIt and Intel RealSense for automated aerosol-chemistry testing, built an AI-driven session-analysis pipeline (Python, SQL, ML), integrated FTIR/mass-spec instruments, and designed custom Altium PCBs and nitinol-actuated test fixtures.
+                    Building a UR10e robotic work cell (ROS2/MoveIt, Intel RealSense, Jetson Orin Nano) targeting ~4× device-handling throughput; integrating FTIR and PI-TOF mass spectrometers for aerosol chemistry; designing Altium PCBs, FCT fixtures, and LCR QC tooling; built a 12-way solenoid tox rig cutting per-test cost by six figures; and developing superelastic nitinol actuators for a new R&amp;D program.
                 </p>
                 <a href="juul.html" class="btn btn-outline">Project Details</a>
                 <a href="projects.html" class="btn btn-outline">All Projects</a>
@@ -117,11 +126,11 @@
             <div class="project">
                 <div class="project-header">
                     <h3>Roll-to-Roll Battery Inspection System</h3>
-                    <span class="company">QuantumScape | San Jose, CA (Sep 2022 – Jul 2023)</span>
+                    <span class="company">QuantumScape | San Jose, CA (Aug 2023 – Aug 2024)</span>
                 </div>
                 <img src="images/QS/large_Quantumscape_company_a7a5ee7567.png" alt="QuantumScape facility">
                 <p>
-                    At QuantumScape I implemented cleanroom linescan camera systems and computer-vision defect-detection algorithms (&gt;75% recall &amp; precision) for solid-state battery electrode inspection, reducing manual review burden and accelerating production yield analysis.
+                    As a Metrology Engineer, improved casting yield on an R&amp;D slot-die coater for solid-state battery separators by designing cleanroom line-scan inspection systems and training CV defect-detection models achieving &gt;75% recall and precision (validated against Keyence VK microscopy).
                 </p>
                 <a href="quantumscape.html" class="btn btn-outline">Project Details</a>
                 <a href="projects.html" class="btn btn-outline">All Projects</a>
@@ -130,7 +139,7 @@
             <div class="project">
                 <div class="project-header">
                     <h3>Modular Robotic Cargo Platform "Iris"</h3>
-                    <span class="company">Udelv | Burlingame, CA (Sep 2021 – Jul 2022)</span>
+                    <span class="company">Udelv | Burlingame, CA (Sep 2021 – Jul 2023)</span>
                 </div>
                     <video class="project-video" controls muted loop playsinline autoplay>
                         <source src="images/Udelv/upod-video.mp4" type="video/mp4">
@@ -152,11 +161,11 @@
             <div class="project">
                 <div class="project-header">
                     <h3>Aerial Wide Area Motion Imaging (WAMI) System</h3>
-                    <span class="company">Transparent Sky | Albuquerque, NM (Jul 2020 - Sep 2021)</span>
+                    <span class="company">Transparent Sky | Albuquerque, NM (Jul 2020 – Sep 2021)</span>
                 </div>
                 <img src="images/TS/wami-cessna.jpg" alt="Cessna aircraft with WAMI composite pod mounted">
                 <p>
-                    As a mechatronics engineer, I prototyped a modular, aircraft-mounted gigapixel-class Wide Area Motion Imaging (WAMI) system enclosed in an aerodynamic composite pod. 
+                    Designed and built an aircraft-mounted gigapixel-class WAMI system for the Air Force Research Laboratory at ~98% lower cost than comparable government programs. Responsible for the entire mechanical system — composite pod, pinion gimbal, and swappable lens cage array.
                 </p>
                 
                 <a href="wami.html" class="btn btn-outline">Project Details</a>

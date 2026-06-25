@@ -18,7 +18,7 @@
 <body>
     <header class="hero">
         <h1>Robotic Test Platform &amp; Automation</h1>
-        <p class="subtitle">JUUL Labs &mdash; Internal Tools &amp; Test Team (Jul 2023 &ndash; Present)</p>
+        <p class="subtitle">Senior Mechatronics Engineer &mdash; JUUL Labs, San Francisco, CA (Aug 2024 &ndash; Current)</p>
         <div class="hero-buttons">
             <a href="index.html" class="btn">Back to Portfolio</a>
             <a href="projects.html" class="btn">All Projects</a>
@@ -27,76 +27,75 @@
     </header>
 
     <div class="container project-container">
+
         <section id="summary">
             <h2>Project Summary</h2>
             <p>
-                As a mechatronics engineer on the internal tools &amp; test team at JUUL Labs, I
-                design, build, and deploy automated systems that accelerate R&amp;D throughput for
-                aerosol-chemistry and device-reliability testing. The work spans mechanical design,
-                embedded electronics, robotics software, and data-science pipelines.
+                On the internal tools &amp; test team at JUUL Labs I design, build, and deploy automated
+                systems that accelerate R&amp;D throughput for aerosol-chemistry and device-reliability testing.
+                The work spans robotics, embedded electronics, PCB design, analytical instrument integration,
+                and data pipelines.
             </p>
         </section>
 
         <section id="robotics">
-            <h3>UR10e Robotic Work Cell</h3>
+            <h2>UR10e Robotic Work Cell</h2>
             <video class="project-video" controls muted loop playsinline autoplay>
-                <source src="images/Robot/20260421_182339_1.mp4" type="video/mp4">
+                <source src="images/Robot/Robot_arm.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <ul>
-                <li>Engineered a UR10e collaborative-robot work cell integrated with ROS2/MoveIt for
-                    repeatable, hands-free sample loading and device actuation during aerosol-chemistry tests.</li>
-                <li>Added Intel RealSense depth cameras for vision-guided pick-and-place, enabling
-                    sub-millimeter positional repeatability across device variants.</li>
-                <li>Designed custom end-effectors and fixturing machined in-house; reduced manual
-                    operator time per test run by &gt;60%.</li>
+                <li>Developing a robotic work cell to automate device handling with a target of ~4× throughput improvement.</li>
+                <li>Python and ROS2/MoveIt control of a UR10e arm with an Intel RealSense depth camera and NVIDIA Jetson Orin Nano for perception and edge compute.</li>
+                <li>Prototyped computer-vision and SLAM workflows on a Hiwonder JetHexa hexapod robot for algorithm development ahead of integration with the arm.</li>
             </ul>
+            <div class="image-gallery single">
+                <img src="images/Robot/Screenshot 2026-02-09 203716.png" alt="RViz showing an RTAB-Map RGB-D SLAM 3D point-cloud reconstruction built on the Hiwonder JetHexa">
+            </div>
         </section>
 
-        <section id="ai-pipeline">
-            <h3>AI Session-Analysis Pipeline</h3>
-            <ul>
-                <li>Built an end-to-end Python pipeline (Pandas, scikit-learn, SQL) that ingests raw
-                    puffing-session telemetry, detects anomalies, and classifies device behavior &mdash;
-                    cutting triage time from days to hours.</li>
-                <li>Integrated FTIR and mass-spectrometer instruments over GPIB/USB, automating
-                    data acquisition and correlation with device session logs.</li>
-                <li>Deployed a lightweight ML model for real-time go/no-go quality checks,
-                    replacing manual review for &gt;90% of routine test runs.</li>
-            </ul>
-        </section>
-
-        <section id="electronics">
-            <h3>PCB Design &amp; Nitinol Fixtures</h3>
-            <ul>
-                <li>Designed multi-layer Altium PCBs for custom test fixtures: USB-C power delivery
-                    conditioning, CAN-bus breakout boards, and sensor-data-acquisition front ends.</li>
-                <li>Prototyped nitinol shape-memory-alloy actuators to drive repeatable button-press
-                    mechanisms, eliminating wear-related variance over millions of actuation cycles.</li>
-                <li>Fabricated functional-checkout-test (FCT) fixtures used on the manufacturing
-                    line to verify electrical and mechanical compliance of finished devices.</li>
-            </ul>
-        </section>
-
-        <section id="in-house-toxicology">
-            <h3>In-House Toxicology Rig</h3>
-            <ul>
-                <li>Collaborated with chemistry team to design and build a closed-loop aerosol
-                    exposure rig for in-house cellular toxicology studies, replacing outsourced
-                    contract-lab testing and shortening feedback cycles from weeks to days.</li>
-                <li>Integrated peristaltic pumps, mass-flow controllers, and custom impinger
-                    assemblies under LabVIEW DAQ control with automated safety interlocks.</li>
-            </ul>
-        </section>
-
-        <section id="conclusion">
-            <h3>Impact</h3>
+        <section id="other-projects-intro">
+            <h2>Other Projects at JUUL</h2>
             <p>
-                The suite of automated tools developed on this team directly accelerates JUUL's
-                R&amp;D velocity: faster test cycles, richer datasets, and fewer manual touch-points
-                across chemistry, reliability, and regulatory-compliance workflows.
+                Separate from the robotic arm work cell, I also lead a range of test, instrumentation,
+                and production-tooling projects across the R&amp;D organization.
             </p>
         </section>
+
+        <section id="session-data">
+            <h2>Session-Data Capture &amp; AI Analysis Pipeline</h2>
+            <ul>
+                <li>Built custom hardware integrating the device, a flow sensor, and a data logger to capture fully synchronized user-session data streams.</li>
+                <li>Built an AI pipeline that transcribes and analyzes session audio using cloud speech-to-text and LLMs, automatically correlating spoken user feedback with flow and zone-temperature data to inform firmware tuning decisions.</li>
+            </ul>
+        </section>
+
+        <section id="aerosol-chemistry">
+            <h2>Aerosol Chemistry Instrumentation</h2>
+            <ul>
+                <li>Retrofitted and integrated an <strong>FTIR spectrometer</strong> for aerosol characterization — heated manifolds, custom inlets, solenoid puffing control, and a purpose-built enclosure.</li>
+                <li>Retrofitted and integrated a <strong>PI-TOF mass spectrometer</strong> (photo-ionization time-of-flight) for real-time aerosol composition analysis, including all mechanical and fluidic interfacing.</li>
+                <li>Brought toxicology testing in-house by building a <strong>12-way solenoid-manifold test rig</strong>, cutting per-test cost by a six-figure margin annually.</li>
+            </ul>
+        </section>
+
+        <section id="test-fixtures">
+            <h2>Test Fixtures, PCBs &amp; Production Tooling</h2>
+            <ul>
+                <li>Building an in-house <strong>clamshell FCT fixture</strong> (functional circuit tester) for validating new device mainboards, and a production-line QC tool that interfaces with an LCR meter for rapid impedance characterization of components.</li>
+                <li>Designed a <strong>magnetic pogo-pin charging/flashing dock</strong> and shipped approximately 150 units to external evaluation users (EUT).</li>
+                <li>Altium PCB designs: flexible RTD temperature-sensor board; rigid boards for flow measurement and USB-C integration.</li>
+            </ul>
+        </section>
+
+        <section id="nitinol">
+            <h2>Nitinol Actuator R&amp;D</h2>
+            <ul>
+                <li>Designed <strong>superelastic nitinol actuators</strong> with manual and automated proof-of-concept prototypes for a new R&amp;D project.</li>
+                <li>Characterized custom valves, pumps, and microfluidic components for integration into device test platforms.</li>
+            </ul>
+        </section>
+
     </div>
 
     <footer id="contact">

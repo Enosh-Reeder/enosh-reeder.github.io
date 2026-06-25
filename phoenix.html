@@ -27,50 +27,37 @@
     </header>
 
     <div class="container project-container">
+
         <section id="summary">
             <h2>Project Summary</h2>
+            <img src="images/Aero/phoenix-f2-render.png" alt="Phoenix F2 firefighting aircraft 3D render">
             <p>
                 The Phoenix F2 is a purpose-built aerial firefighting aircraft designed from the ground
                 up as part of the Cal Poly Aerospace Engineering capstone sequence (AERO 443/444/445).
                 The design addresses the growing demand for next-generation air tankers capable of
-                rapid response and high retardant capacity in challenging terrain.
+                rapid response and high retardant capacity in challenging terrain. Completed with
+                teammates Will Jo, Chino Cruz, Nathan Lee, and Jonathan Koutouan.
             </p>
-            <img src="images/Aero/phoenix-f2-render.png" alt="Phoenix F2 firefighting aircraft 3D render">
         </section>
 
         <section id="specs">
-            <h3>Key Specifications</h3>
+            <h2>Key Specifications</h2>
             <div class="spec-grid">
-                <div class="spec-card">
-                    <div class="spec-label">Max Takeoff Weight</div>
-                    <div class="spec-value">59,400 lb</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Wingspan</div>
-                    <div class="spec-value">93 ft</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Retardant Capacity</div>
-                    <div class="spec-value">2,650 gal</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Propulsion</div>
-                    <div class="spec-value">Twin Turboprop</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-label">Class</div>
-                    <div class="spec-value">FAA Part 25</div>
-                </div>
+                <div class="spec-card"><span class="spec-label">Max Takeoff Weight</span><span class="spec-value">59,400 lb</span></div>
+                <div class="spec-card"><span class="spec-label">Wingspan</span><span class="spec-value">93 ft</span></div>
+                <div class="spec-card"><span class="spec-label">Retardant Capacity</span><span class="spec-value">2,650 gal</span></div>
+                <div class="spec-card"><span class="spec-label">Cruise Speed</span><span class="spec-value">310 KTAS</span></div>
+                <div class="spec-card"><span class="spec-label">Stall Speed</span><span class="spec-value">64 KIAS</span></div>
+                <div class="spec-card"><span class="spec-label">Range</span><span class="spec-value">525 NMi</span></div>
+                <div class="spec-card"><span class="spec-label">Wing Loading</span><span class="spec-value">48 lb/ft²</span></div>
+                <div class="spec-card"><span class="spec-label">CL<sub>max</sub></span><span class="spec-value">3.4</span></div>
+                <div class="spec-card"><span class="spec-label">Propulsion</span><span class="spec-value">Twin Turboprop</span></div>
+                <div class="spec-card"><span class="spec-label">Class</span><span class="spec-value">FAA Part 25</span></div>
             </div>
-            <img src="images/Aero/phoenix-f2-drawing.png" alt="Phoenix F2 three-view technical drawing with dimensions">
         </section>
 
         <section id="design">
-            <h3>Design &amp; Analysis</h3>
-            <video class="project-video" controls muted loop playsinline>
-                <source src="images/Aero/VID_20190604_120547.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <h2>Design &amp; Analysis</h2>
             <ul>
                 <li>Performed aerodynamic sizing using XFLR5 and Star-CCM+ CFD to optimize wing
                     planform and high-lift device configuration for low-speed drop-run performance.</li>
@@ -83,19 +70,27 @@
             </ul>
         </section>
 
-        <section id="propulsion">
-            <h3>Propulsion Selection</h3>
-            <img src="images/Aero/port2023_p9_45.png" alt="Turboprop engine and test rig">
-            <ul>
-                <li>Down-selected propulsion from a field of turboprop options based on specific
-                    fuel consumption, power-to-weight, and certification maturity.</li>
-                <li>Analyzed propeller sizing and gear-reduction requirements for efficient low-speed
-                    thrust at firefighting altitudes and temperatures.</li>
-            </ul>
+        <section id="poster">
+            <h2>Full Design Poster</h2>
+            <img src="images/Aero/Aero_poster.png" alt="Phoenix F2 full design poster — three-view drawing, specs, and analysis summary">
+        </section>
+
+        <section id="wind-tunnel">
+            <h2>Wind Tunnel Testing</h2>
+            <video class="project-video" controls muted loop playsinline>
+                <source src="images/Aero/VID_20190604_120547.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>
+                As a side project during the capstone year, I 3D-printed a scale car model to support
+                a master's student's aerodynamics thesis experiment. The video shows the car in the
+                Cal Poly low-speed wind tunnel — a separate demonstration of wind tunnel techniques
+                and flow visualization, not Phoenix F2 testing.
+            </p>
         </section>
 
         <section id="conclusion">
-            <h3>Outcome</h3>
+            <h2>Outcome</h2>
             <p>
                 The Phoenix F2 design was presented at the Cal Poly AERO 445 design review,
                 demonstrating a viable clean-sheet aircraft concept that meets FAA regulatory
@@ -104,6 +99,7 @@
                 structures, propulsion, and avionics architecture.
             </p>
         </section>
+
     </div>
 
     <footer id="contact">

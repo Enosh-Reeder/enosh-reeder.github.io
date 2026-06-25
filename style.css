@@ -125,32 +125,78 @@ header.hero {
     font-size: 1.2rem;
 }
 
-/* --- About & Skills Section --- */
-.skill-matrix {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+/* --- Skills Accordion (button styled) --- */
+.skills-accordion {
+    margin-top: 1.5rem;
 }
-.skill-category h3 {
-    margin-top: 0;
+
+details.skill-group {
+    margin-bottom: 0.75rem;
+}
+
+/* Summary mimics the site's .btn-outline button */
+details.skill-group summary {
+    background: transparent;
+    color: var(--medium-color);
+    border: 2px solid #ddd;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    list-style: none;
+    user-select: none;
+}
+
+details.skill-group summary::-webkit-details-marker {
+    display: none;
+}
+
+details.skill-group summary::before {
+    content: '+';
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+details.skill-group summary:hover {
     color: var(--accent-color);
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-.skill-category ul {
+
+details.skill-group[open] summary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+details.skill-group[open] summary::before {
+    transform: rotate(45deg);
+}
+
+details.skill-group ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0.75rem 24px 0.25rem;
     margin: 0;
 }
-.skill-category li {
-    background: #f9f9f9;
-    padding: 8px 12px;
-    margin-bottom: 6px;
-    border-radius: 4px;
-    border-left: 3px solid var(--accent-color);
+
+details.skill-group li {
+    padding: 5px 0;
+    font-size: 0.92rem;
+    border-bottom: 1px solid #ebebeb;
+    line-height: 1.5;
 }
-/* --- About & Skills Section --- */
+
+details.skill-group li:last-child {
+    border-bottom: none;
+}
+
+/* --- About Section --- */
 .about-container {
     display: flex;
     align-items: flex-start;
@@ -354,6 +400,21 @@ body.dark-mode h2 {
 body.dark-mode .skill-category li {
     background: var(--dark-color);
     border-left-color: var(--accent-color);
+}
+
+body.dark-mode details.skill-group summary {
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+body.dark-mode details.skill-group summary:hover,
+body.dark-mode details.skill-group[open] summary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+body.dark-mode details.skill-group li {
+    border-bottom-color: var(--medium-color);
 }
 
 body.dark-mode .project {

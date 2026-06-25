@@ -3,76 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uPod Cargo Platform | Project Details</title>
-    <link rel="stylesheet" href="style.css">
+    <title>uPod Autonomous Delivery System | Enosh Reeder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/Icons/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="images/Icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/Icons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="project-page.css">
 </head>
 <body>
     <header class="hero">
-        <h1>uPod Modular Cargo Platform</h1>
-        <p class="subtitle">A Deep Dive into the Design and Engineering</p>
+        <h1>uPod Autonomous Delivery System</h1>
+        <p class="subtitle">Senior Mechatronics Engineer &mdash; Udelv, Burlingame, CA (Sep 2021 &ndash; Jul 2023)</p>
         <div class="hero-buttons">
-            <a href="index.html" class="btn">Back to Main Portfolio</a>
+            <a href="index.html" class="btn">Back to Portfolio</a>
             <a href="projects.html" class="btn">All Projects</a>
             <a href="#contact" class="btn">Contact</a>
         </div>
     </header>
 
     <div class="container project-container">
-        <section id="summary">
-            <h2>Project Summary</h2>
-            <p>
-                As Senior Mechatronics Engineer at Udelv, I was integral to the team that designed,
-                built, and tested the uPod — a 4,000 lb / 340 ft³ modular robotic cargo storage
-                platform for an autonomous electric delivery vehicle. My focus was the electromechanical
-                systems managing the cargo: door mechanisms, shelving, electronics, and data analysis.
-            </p>
+
+        <section id="overview">
+            <h2>Project Overview</h2>
             <div class="image-gallery">
-                <img src="images/Udelv/upod-vehicle.jpg" alt="uPod-equipped Udelv delivery vehicle">
-                <img src="images/Udelv/upod-transporter.jpg" alt="Udelv Transporter vehicle with loaded uPod">
+                <img src="images/Udelv/upod-vehicle.jpg" alt="uPod delivery vehicle on road">
+                <img src="images/Udelv/upod-transporter.jpg" alt="Udelv Transporter chassis">
+            </div>
+            <video class="project-video" controls muted loop playsinline>
+                <source src="images/Udelv/upod-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>
+                Udelv's autonomous last-mile electric delivery vehicle consists of two
+                separable systems: the <strong>Transporter</strong> (an outsourced u-frame
+                drive platform) and the <strong>uPod</strong> (the in-house robotic cargo
+                storage unit that sits on top). As Senior Mechatronics Engineer I was
+                responsible for the uPod's iris door mechanisms, load-bearing structure,
+                sensor integration, and modular shelving system.
+            </p>
+        </section>
+
+        <section id="requirements">
+            <h2>System Requirements</h2>
+            <div class="spec-grid">
+                <div class="spec-card"><span class="spec-label">Vehicle Class</span><span class="spec-value">10,000 lb Class 2 limit</span></div>
+                <div class="spec-card"><span class="spec-label">Compartments</span><span class="spec-value">80 total (8×5 per side)</span></div>
+                <div class="spec-card"><span class="spec-label">Tote Sizing</span><span class="spec-value">Standard shipping totes</span></div>
+                <div class="spec-card"><span class="spec-label">Door Cycle</span><span class="spec-value">Full-side open in ≤10 s</span></div>
+                <div class="spec-card"><span class="spec-label">Pod Removal</span><span class="spec-value">2 pins, 12 bolts, 1 connector</span></div>
+                <div class="spec-card"><span class="spec-label">Protection</span><span class="spec-value">IP55 / brush seals</span></div>
+                <div class="spec-card"><span class="spec-label">Service Life</span><span class="spec-value">10 years</span></div>
+                <div class="spec-card"><span class="spec-label">Ratings</span><span class="spec-value">Break-in, wind, snow-load rated</span></div>
+            </div>
+            <ul>
+                <li>Pod removable for standalone operation — lifting lugs and chain hoist compatible.</li>
+                <li>Removable shelves and dividers with embedded shelf-detection sensors.</li>
+                <li>Full-side automatic door opening with manual override.</li>
+                <li>Hidden actuation and low noise for residential-area operation.</li>
+            </ul>
+        </section>
+
+        <section id="structure">
+            <h2>Pod Structure &amp; Frame</h2>
+            <div class="image-gallery">
+                <img src="images/Udelv/juul_image28.jpg" alt="Pod frame interior showing electronics, wiring, and guide rails">
+                <img src="images/Udelv/port2023_p3_4.png" alt="Assembled uPod frame">
+            </div>
+            <p>
+                The structural frame carries the full load of 80 totes plus the iris door
+                assemblies on each side. Rails, wiring, and control electronics are integrated
+                inside the frame for a clean exterior and easy serviceability. Lifting lugs
+                allow the complete pod to be hoisted off the Transporter with a standard
+                chain hoist for maintenance or standalone operation.
+            </p>
+        </section>
+
+        <section id="iris">
+            <h2>Iris Door Development &amp; Challenges</h2>
+            <div class="image-gallery">
+                <img src="images/Udelv/port2023_p2_3.png" alt="Iris door CAD model">
+                <img src="images/Udelv/port2023_p3_6.png" alt="Iris door prototype">
+            </div>
+            <p>
+                The iris door — a full-side automated rolling shutter that opens in ≤10 seconds —
+                was the most mechanically challenging subsystem. Key development milestones:
+            </p>
+            <ul>
+                <li><strong>3-month prototype crunch:</strong> plywood substituted for delayed composite shelving to meet the demo deadline.</li>
+                <li><strong>Inherited chain-and-sprocket drive failed:</strong> poor end-clip attachment, and the 5 mm pitch / 2.5 mm width chain was simply too thin to reliably transmit the required force without jamming or dropping links.</li>
+                <li><strong>Rack-and-pinion redesign:</strong> replaced chain with rack-and-pinion for positive engagement and better load distribution. Higher friction required a gearbox ratio change to maintain the 10 s cycle target.</li>
+                <li>Reinforced guide channels and controlled corner geometry to prevent slat binding.</li>
+                <li>Fixed 10 cm vertical sag in the iris mid-panel with rub strips and adjusted guide tolerances.</li>
+                <li>Lubrication schedule determined through testing to minimize noise and wear.</li>
+            </ul>
+        </section>
+
+        <section id="shelving">
+            <h2>Modular Shelving System</h2>
+            <div class="image-gallery">
+                <img src="images/Udelv/port2023_p4_7.png" alt="Modular shelving unit">
+                <img src="images/Udelv/port2023_p4_8.png" alt="Shelf and divider installation">
+            </div>
+            <ul>
+                <li>Each of the 80 compartments is sized for standard shipping totes — consistent delivery-partner compatibility.</li>
+                <li>Shelves and dividers are tool-lessly removable in the field for cargo reconfiguration.</li>
+                <li>Shelf-detection sensors (embedded) report occupancy to the delivery software in real time.</li>
+            </ul>
+        </section>
+
+        <section id="current-testing">
+            <h2>Motor Current Measurement &amp; Friction Analysis</h2>
+            <div class="image-gallery single">
+                <img src="images/Udelv/juul_image36.png" alt="Motor current vs. time — iris friction analysis chart">
+            </div>
+            <p>
+                To quantify friction in the iris drive train and right-size the motors for the
+                next-generation 10-second cycle requirement, I instrumented the prototype with
+                current measurement across the full door travel. The resulting current vs. time
+                traces revealed:
+            </p>
+            <ul>
+                <li>Friction hot-spots at guide corners (peak current spikes).</li>
+                <li>Steady-state friction baseline for gearbox ratio selection.</li>
+                <li>Before/after comparison that validated the impact of rub strips and lubrication on the average load.</li>
+            </ul>
+        </section>
+
+        <section id="full-assembly">
+            <h2>Full Assembly</h2>
+            <div class="image-gallery">
+                <img src="images/Udelv/upod-frame.png" alt="uPod full frame assembly">
+                <img src="images/Udelv/juul_image25.jpeg" alt="uPod assembly detail">
+                <img src="images/Udelv/juul_image26.jpeg" alt="uPod assembly detail">
+                <img src="images/Udelv/juul_image27.png" alt="uPod assembly detail">
+                <img src="images/Udelv/juul_image29.jpg" alt="uPod integration">
+                <img src="images/Udelv/juul_image30.jpg" alt="uPod integration">
             </div>
         </section>
 
-        <section id="mechanical-design">
-            <h3>Mechanical Design &amp; Systems</h3>
-            <img src="images/Udelv/upod-frame.png" alt="uPod frame and shelving structure">
+        <section id="dfm-sourcing">
+            <h2>DFM / DFA &amp; Vendor Sourcing</h2>
             <ul>
-                <li>Created a modular cargo door and shelving system including structure, electronics,
-                    and sensor housings to optimize cargo capacity and cost.</li>
-                <li>Designed door mechanisms for reliable operation across millions of open/close
-                    cycles; researched materials and additives to meet product-lifetime targets.</li>
-                <li>Managed the BOM and revision history in SolidWorks PDM, coordinating design
-                    changes across mechanical and electrical sub-teams.</li>
+                <li>Sourced and interfaced with vendors for <strong>injection-molded parts, aluminum extrusions, and OTS components</strong>, managing DFM and DFA review cycles to hit cost and lead-time targets.</li>
+                <li>Used <strong>top-down SolidWorks modeling</strong> for complex assemblies, ensuring dimensional compatibility across hundreds of unique parts from multiple suppliers.</li>
+                <li>Researched tribology materials and additives to achieve a product lifetime target of millions of duty cycles on the iris drive train.</li>
             </ul>
         </section>
 
-        <section id="analysis">
-            <h3>Friction Analysis &amp; Resolution</h3>
-            <img src="images/Udelv/juul_image36.png" alt="Python friction analysis chart from oscilloscope data">
+        <section id="outcomes">
+            <h2>Outcomes</h2>
             <ul>
-                <li>Identified and resolved areas of high friction on the cargo door system by
-                    capturing motor-current waveforms with an oscilloscope and analyzing them
-                    with Python scripts to pinpoint binding locations.</li>
-                <li>Correlated friction measurements to specific door positions, enabling targeted
-                    component adjustments that met the cycle-life specification.</li>
+                <li><strong>Stable structure</strong> — pod successfully lifted onto and off the Transporter using chain hoist.</li>
+                <li><strong>Reliable iris demos</strong> — rack-and-pinion redesign achieved consistent full-side open/close cycles in front of stakeholders.</li>
+                <li><strong>Million-cycle reliability</strong> — failure modes resolved through motor-current-draw analysis and tribology material optimization.</li>
+                <li><strong>Modular shelving</strong> — tool-less removal and shelf-detection sensors validated in lab testing.</li>
+                <li><strong>2nd-prototype design</strong> completed in CAD; funding ran out before build.</li>
             </ul>
         </section>
 
-        <section id="conclusion">
-            <h3>Outcome</h3>
-            <p>
-                The uPod successfully went from prototype to production-intent design, enabling
-                Udelv's Transporter vehicle to carry fully loaded cargo platforms autonomously.
-                The project was a comprehensive exercise in mechatronic design for a real-world
-                autonomous-vehicle application, balancing cost, durability, and functionality
-                under tight mass and volume constraints.
-            </p>
-        </section>
     </div>
 
     <footer id="contact">
@@ -89,7 +182,7 @@
         <button id="theme-toggle" class="theme-toggle-btn">Toggle Dark Mode</button>
         <p class="footer-copyright">&copy; 2026 Enosh Reeder. All rights reserved.</p>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

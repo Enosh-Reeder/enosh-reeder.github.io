@@ -3,100 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WAMI System | Project Details</title>
-    <link rel="stylesheet" href="style.css">
+    <title>WAMI III — Wide Area Motion Imaging | Enosh Reeder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/Icons/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="images/Icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/Icons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="project-page.css">
 </head>
 <body>
     <header class="hero">
-        <h1>Aerial WAMI System</h1>
-        <p class="subtitle">A Deep Dive into the Prototyping and Design</p>
+        <h1>WAMI III — Wide Area Motion Imaging</h1>
+        <p class="subtitle">Mechatronics Engineer &mdash; Transparent Sky, Albuquerque, NM (Jul 2020 &ndash; Sep 2021)</p>
         <div class="hero-buttons">
-            <a href="index.html" class="btn">Back to Main Portfolio</a>
+            <a href="index.html" class="btn">Back to Portfolio</a>
             <a href="projects.html" class="btn">All Projects</a>
             <a href="#contact" class="btn">Contact</a>
         </div>
     </header>
 
     <div class="container project-container">
+
         <section id="summary">
             <h2>Project Summary</h2>
-            <p>
-                As a Mechatronics Engineer at Transparent Sky, I prototyped a modular,
-                aircraft-mounted gigapixel-class Wide Area Motion Imaging (WAMI) system.
-                The system mounts under a Cessna and captures high-resolution wide-area imagery
-                for persistent surveillance and motion tracking. My focus was the aerodynamic
-                composite pod enclosure, multi-camera housing, and the electromechanical integration
-                of the sensor suite.
-            </p>
             <div class="image-gallery">
-                <img src="images/TS/wami-cessna.jpg" alt="Cessna with WAMI pod mounted underneath">
-                <img src="images/TS/wami-pod.jpg" alt="WAMI aerodynamic composite pod exterior">
+                <img src="images/TS/wami-cessna.jpg" alt="WAMI pod mounted to Cessna aircraft">
+                <img src="images/TS/wami-pod.jpg" alt="WAMI aerodynamic composite pod">
+            </div>
+            <p>
+                WAMI III is a lightweight, low-cost gigapixel-class Wide Area Motion Imaging system
+                developed for the <strong>Air Force Research Laboratory (AFRL)</strong>. An aircraft
+                orbits miles above a target area while the system captures overlapping wide-angle imagery;
+                onboard software performs real-time image registration, geolocation, and 3D reconstruction
+                across the full scene. A custom pinion-gimbal design enables the entire sensor array to be
+                housed inside a streamlined composite aerodynamic pod. I was responsible for the entire
+                mechanical system design — gimbal, lens cages, composite pod, and aircraft attachment.
+            </p>
+        </section>
+
+        <section id="requirements">
+            <h2>System Requirements</h2>
+            <div class="spec-grid">
+                <div class="spec-card"><span class="spec-label">Resolution</span><span class="spec-value">&gt;1 Gigapixel</span></div>
+                <div class="spec-card"><span class="spec-label">Scalability</span><span class="spec-value">2 – 10+ cameras</span></div>
+                <div class="spec-card"><span class="spec-label">Platform</span><span class="spec-value">Drone / small aircraft</span></div>
+                <div class="spec-card"><span class="spec-label">SWaP</span><span class="spec-value">Minimized (Size, Weight &amp; Power)</span></div>
+                <div class="spec-card"><span class="spec-label">Image Overlap</span><span class="spec-value">Fixed overlap for stitch</span></div>
+                <div class="spec-card"><span class="spec-label">Tolerance (original)</span><span class="spec-value">&lt;1 px (~0.0002&quot; between cameras)</span></div>
+                <div class="spec-card"><span class="spec-label">Tolerance (final)</span><span class="spec-value">100 px (relaxed by new algorithm)</span></div>
             </div>
         </section>
 
-        <section id="pod-design">
-            <h3>Aerodynamic Composite Pod</h3>
-            <img src="images/TS/wami-cad.png" alt="WAMI pod CAD cutaway showing camera layout">
+        <section id="gimbal">
+            <h2>Pinion Gimbal Design</h2>
+            <div class="image-gallery">
+                <img src="images/TS/port2023_p5_9.png" alt="Gimbal and camera array CAD — cutaway inside the pod">
+                <img src="images/TS/port2023_p5_10.png" alt="Gimbal four-bar linkage CAD — alternate view">
+            </div>
+            <p>
+                The gimbal uses a <strong>parallelogram four-bar linkage</strong> principle to keep the
+                camera array level regardless of aircraft attitude, while a compact pinion arrangement
+                drives pan and tilt through a minimal footprint.
+            </p>
             <ul>
-                <li>Designed an aerodynamic fiberglass composite pod to house the full WAMI camera
-                    array, optimized for low drag and thermal management at cruise altitude.</li>
-                <li>Created detailed SolidWorks models of the pod structure, internal camera mounts,
-                    vibration isolators, and cable routing to ensure electromagnetic compatibility.</li>
-                <li>Coordinated with composite fabrication vendors to translate the CAD design into
-                    a flight-worthy shell within weight and cost constraints.</li>
+                <li><strong>Carbon fiber (CF) throughout</strong> — chosen for low CTE, high stiffness-to-weight ratio, and dimensional stability under temperature swings at altitude.</li>
+                <li>CF plates were CNC-milled and routed to tight tolerances.</li>
+                <li>CF tubes and bearings press-fit and epoxied into 3D-printed interface parts.</li>
+                <li>6061-T6 aluminium box tube used for aircraft hardpoint attachment.</li>
             </ul>
+        </section>
+
+        <section id="lens-cage">
+            <h2>Adjustable Lens Cage</h2>
+            <div class="image-gallery single">
+                <img src="images/TS/port2023_p6_15.png" alt="3D-printed carbon-filled nylon lens cage">
+            </div>
+            <ul>
+                <li>Designed for <strong>swappable cameras</strong> — field swap in minutes without realignment.</li>
+                <li>Four wedge clamps per cage provide precise, repeatable clamping force.</li>
+                <li>Printed in <strong>Markforged CF-filled nylon</strong> for stiffness and print accuracy.</li>
+                <li>Cage geometry retains full access to the focus ring for manual focus adjustment.</li>
+            </ul>
+        </section>
+
+        <section id="pod">
+            <h2>Composite Pod Construction</h2>
+            <p>
+                The aerodynamic pod was fabricated entirely in-house using a composite layup process:
+            </p>
+            <img src="images/TS/Pod_Construction.png" alt="Nine-step composite pod build: CAD, CNC-routed foam pattern, gel coat, wet and pre-preg layup, oven cure, trim, and assembly">
+            <ol>
+                <li>CAD model of outer mold line (OML)</li>
+                <li>CNC-milled foam plug</li>
+                <li>Gel coat surface finish applied</li>
+                <li>Wet/pre-preg carbon fiber layup</li>
+                <li>Vacuum-bagged and oven-cured</li>
+                <li>Demold, trim, and final assembly</li>
+            </ol>
+            <p>
+                The result is a lightweight, aerodynamically smooth enclosure that reduces drag and
+                vibration compared to a box structure, while protecting optics from wind, rain, and debris.
+            </p>
+            <div class="image-gallery single">
+                <img src="images/TS/port2023_p7_28.png" alt="Finished composite pod — underside view showing the camera window">
+            </div>
         </section>
 
         <section id="camera-housing">
-            <h3>Multi-Camera Housing &amp; FOV Optimization</h3>
+            <h2>Multi-Camera Housing &amp; FOV Optimization</h2>
             <div class="image-gallery">
-                <img src="images/TS/wami-camera-housing.png" alt="3D printed camera housing assembly">
-                <img src="images/TS/wami-fov.png" alt="WAMI pod CAD render showing camera fields of view">
+                <img src="images/TS/port2023_p6_17.png" alt="Clean 6-camera sensor array in housing">
+                <img src="images/TS/wami-fov.png" alt="Camera FOV overlap diagram">
             </div>
-            <ul>
-                <li>Designed and 3D-printed modular camera mount housings that allow rapid sensor
-                    swap-out for different mission payloads without structural disassembly.</li>
-                <li>Optimized individual camera pointing angles to maximize overlapping coverage
-                    while maintaining a seamless composite gigapixel mosaic.</li>
-                <li>Validated the field-of-view geometry in SolidWorks against ground-sampling
-                    distance requirements at target operating altitudes.</li>
-            </ul>
+            <p>
+                Camera placement within the housing was optimized to produce the fixed-overlap tiling
+                needed by the stitching algorithm. Each lens cage locks cameras to a precise angular
+                position; the FOV diagram shows the resulting coverage pattern and verifies that
+                adjacent camera footprints overlap correctly at the designed flight altitude.
+            </p>
         </section>
 
         <section id="interior">
-            <h3>Pod Interior &amp; Systems Integration</h3>
-            <img src="images/TS/wami-interior.jpg" alt="Inside view of the WAMI pod showing sensors and electronics">
-            <ul>
-                <li>Routed power, data, and cooling lines inside the pod with serviceability in mind:
-                    all harnesses are labeled and accessible through removable panels.</li>
-                <li>Integrated thermal management to keep cameras and compute hardware within
-                    operating temperature across a wide range of ambient conditions.</li>
-            </ul>
-        </section>
-
-        <section id="leadership">
-            <h3>Team &amp; Mentorship</h3>
-            <ul>
-                <li>Recruited and mentored interns and junior engineers for design and manufacturing
-                    roles, establishing a peer-review workflow for CAD releases.</li>
-            </ul>
-        </section>
-
-        <section id="conclusion">
-            <h3>Outcome</h3>
+            <h2>Pod Interior &amp; Integration</h2>
+            <div class="image-gallery single">
+                <img src="images/TS/port2023_p6_18.png" alt="Camera array installed in the aircraft camera bay">
+            </div>
             <p>
-                The prototype delivered a flight-ready WAMI enclosure that successfully integrated
-                the full camera array and supporting electronics. The project demonstrated rapid
-                mechanical prototyping, composite design, and cross-disciplinary systems integration
-                under tight aerospace constraints.
+                The gimbal and camera array are integrated into the composite pod shell. Quick-swap
+                mounting fixtures allow the full sensor head to be installed or removed in under
+                5 minutes — down from over 1 hour with the original hardware setup.
             </p>
         </section>
+
+        <section id="shop-build">
+            <h2>Composite Shop Build-Out</h2>
+            <div class="image-gallery">
+                <img src="images/TS/port2023_p8_30.png" alt="4×8 ft CNC router machining a foam mold pattern">
+                <img src="images/TS/port2023_p8_34.png" alt="CNC-machined foam plugs for the pod nose cones">
+            </div>
+            <ul>
+                <li>Built the entire composite fabrication shop from scratch: 4×8 ft CNC router for mold-making, autoclave, curing ovens, and a dedicated paint/sanding booth.</li>
+                <li>Hired and mentored junior engineers and the fabrication team as the program scaled.</li>
+            </ul>
+        </section>
+
+        <section id="flight-testing">
+            <h2>Flight Testing &amp; Outcomes</h2>
+            <div class="image-gallery single">
+                <img src="images/TS/port2023_p6_16.png" alt="In-flight — installed cameras imaging the ground below">
+            </div>
+            <ul>
+                <li><strong>Cost:</strong> delivered at <strong>~98% lower cost</strong> than comparable government WAMI programs.</li>
+                <li><strong>Setup time</strong> cut from &gt;1 hour to &lt;5 minutes (&sim;90% faster) via quick-swap fixtures.</li>
+                <li><strong>3D reconstruction</strong> demonstrated successfully; system mechanically stable across multiple flight tests.</li>
+                <li>AFRL subsequently changed the program requirement to a ball-gimbal form factor, but the manufacturing know-how, optics calibration, and software pipeline carried forward.</li>
+            </ul>
+        </section>
+
     </div>
 
     <footer id="contact">

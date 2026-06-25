@@ -52,24 +52,30 @@
 
 .spec-card {
     background: #f9f9f9;
+    border: 1px solid #e6e6e6;
     border-left: 3px solid var(--accent-color);
-    border-radius: 4px;
-    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    padding: 0.85rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
 }
 
 .spec-card .spec-label {
-    font-size: 0.75rem;
+    display: block;
+    font-size: 0.72rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     color: #777;
-    margin-bottom: 0.25rem;
+    font-weight: 700;
 }
 
 .spec-card .spec-value {
-    font-family: 'Space Mono', monospace;
-    font-size: 1.05rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--dark-color);
+    line-height: 1.35;
 }
 
 /* Two-column image gallery */
@@ -84,6 +90,17 @@
     margin: 0;
     height: 220px;
     object-fit: cover;
+}
+
+/* Single-image gallery: show the full image, uncropped */
+.image-gallery.single {
+    grid-template-columns: 1fr;
+}
+
+.image-gallery.single img {
+    height: auto;
+    max-height: 620px;
+    object-fit: contain;
 }
 
 /* Tag chips for tech stack */
@@ -111,6 +128,8 @@ body.dark-mode .project-container h3 {
 
 body.dark-mode .spec-card {
     background: var(--dark-color);
+    border-color: var(--medium-color);
+    border-left-color: var(--accent-color);
 }
 
 body.dark-mode .spec-card .spec-label {
