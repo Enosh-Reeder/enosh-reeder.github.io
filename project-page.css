@@ -103,6 +103,72 @@
     object-fit: contain;
 }
 
+/* Vertical stack of full-size images (no crop) */
+.image-gallery.stack {
+    grid-template-columns: 1fr;
+}
+
+.image-gallery.stack img {
+    height: auto;
+    max-height: 620px;
+    object-fit: contain;
+}
+
+/* Full-width landscape photos in a two-column row */
+.image-gallery.shop-photos {
+    margin: 0.75rem 0;
+    gap: 0.75rem;
+}
+
+.image-gallery.shop-photos img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    margin: 0;
+}
+
+/* Text left, image right */
+.project-split {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.project-split-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-split-text p,
+.project-split-text ul {
+    margin-top: 0;
+}
+
+.project-split-media {
+    flex: 0 0 260px;
+}
+
+.project-split-media img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .project-split {
+        flex-direction: column;
+    }
+
+    .project-split-media {
+        flex: none;
+        align-self: center;
+        max-width: 260px;
+    }
+}
+
 /* Tag chips for tech stack */
 .tag-list {
     display: flex;
